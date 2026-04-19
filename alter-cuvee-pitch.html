@@ -7,11 +7,40 @@
 <title>ALTER CUVÉE — An alternative for your wine moments</title>
 <meta name="description" content="ALTER CUVÉE — a non-alcoholic alternative for wine moments. Built, not torn down. An alternative, not an imitation." />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
+  /* ---------- Self-hosted fonts ----------
+     Instrument Serif (serif, static Regular + Italic),
+     Geist (sans, variable weight 100–900),
+     Geist Mono (mono, variable weight 100–900).                           */
+  @font-face{
+    font-family: "Instrument Serif";
+    src: url("pitch-assets/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: "Instrument Serif";
+    src: url("pitch-assets/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: "Geist";
+    src: url("pitch-assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: "Geist Mono";
+    src: url("pitch-assets/fonts/GeistMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root{
     --ink:           #2E2A26;
     --ink-soft:      #4A423B;
@@ -25,9 +54,9 @@
     --paper:         #FFFFFF;
     --ink-invert:    #FBF8F2;
 
-    --serif:  "Fraunces", "Cormorant Garamond", "Didot", "Bodoni 72", Cambria, Georgia, serif;
-    --sans:   "Hanken Grotesk", "Inter", "Avenir Next", "Helvetica Neue", system-ui, sans-serif;
-    --mono:   "JetBrains Mono", "SF Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    --serif:  "Instrument Serif", "Cormorant Garamond", "Didot", "Bodoni 72", Cambria, Georgia, serif;
+    --sans:   "Geist", "Inter", "Avenir Next", "Helvetica Neue", system-ui, sans-serif;
+    --mono:   "Geist Mono", "SF Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
     --max:    1180px;
     --track:  0.01em;      /* letter spacing for display caps (Fraunces reads well tight) */
