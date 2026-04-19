@@ -611,6 +611,94 @@
   .traction .row .v{ font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); color: var(--ink); line-height: 1.4; }
   .traction .row .v small{ display: block; font-family: var(--sans); font-size: 13px; color: var(--muted); margin-top: 6px; letter-spacing: 0.04em; }
 
+  /* ---------- Team ---------- */
+  .team{ background: var(--cream); }
+  .team .wrap{ max-width: 1240px; }
+  .team .grid-team{
+    display: grid;
+    grid-template-columns: minmax(300px, 0.85fr) 1.15fr;
+    gap: 56px;
+    margin-top: 28px;
+    align-items: stretch;
+  }
+  .team .photo{
+    position: relative;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    overflow: hidden;
+    min-height: 100%;
+  }
+  .team .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.02);
+  }
+  .team .photo figcaption{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 14px 18px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);
+    color: rgba(251,248,242,0.92);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .team .founders{
+    display: flex;
+    flex-direction: column;
+  }
+  .team .founder{
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 28px;
+    align-items: baseline;
+  }
+  .team .founder:last-child{ border-bottom: 1px solid var(--rule); }
+  .team .founder .name{
+    font-family: var(--serif);
+    font-size: clamp(22px, 2vw, 28px);
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .team .founder .role{
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--taupe-deep);
+    white-space: nowrap;
+  }
+  .team .founder ul{
+    grid-column: 1 / -1;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .team .founder li{
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    padding-left: 14px;
+    position: relative;
+  }
+  .team .founder li::before{
+    content: "";
+    position: absolute;
+    left: 0; top: 0.7em;
+    width: 6px; height: 1px;
+    background: var(--taupe-deep);
+  }
+
   /* ---------- Ask (closing) ---------- */
   .ask{
     background: linear-gradient(180deg, #F6EFE1 0%, #E9DBC3 100%);
@@ -1071,6 +1159,20 @@
       margin-top: 4px;
       line-height: 1.45;
     }
+
+    /* ---- 12 · Team ---- */
+    .team .grid-team{
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .team .photo{ aspect-ratio: 4 / 3; min-height: 0; }
+    .team .photo figcaption{ padding: 10px 14px; font-size: 10px; }
+    .team .founder{ padding: 16px 0; gap: 4px 16px; }
+    .team .founder .name{ font-size: 20px; }
+    .team .founder .role{ font-size: 9.5px; letter-spacing: 0.14em; }
+    .team .founder ul{ margin-top: 8px; gap: 5px; }
+    .team .founder li{ font-size: 13px; line-height: 1.45; }
   }
 </style>
 </head>
@@ -1095,7 +1197,8 @@
   <a href="#s9"  data-target="s9"><span class="label"><span class="num">09</span><span class="sep"></span><span class="title">Three cuvées</span></span><span class="tick" aria-hidden="true"></span></a>
   <a href="#s10" data-target="s10"><span class="label"><span class="num">10</span><span class="sep"></span><span class="title">Why now</span></span><span class="tick" aria-hidden="true"></span></a>
   <a href="#s11" data-target="s11"><span class="label"><span class="num">11</span><span class="sep"></span><span class="title">Traction</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s12" data-target="s12"><span class="label"><span class="num">12</span><span class="sep"></span><span class="title">The invitation</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s12" data-target="s12"><span class="label"><span class="num">12</span><span class="sep"></span><span class="title">Team</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s13" data-target="s13"><span class="label"><span class="num">13</span><span class="sep"></span><span class="title">The invitation</span></span><span class="tick" aria-hidden="true"></span></a>
 </nav>
 
 <!-- Mobile: floating index button + drawer -->
@@ -1121,7 +1224,8 @@
     <li><a href="#s9"  data-target="s9"><span class="num">09</span><span class="title">Three cuvées</span></a></li>
     <li><a href="#s10" data-target="s10"><span class="num">10</span><span class="title">Why now</span></a></li>
     <li><a href="#s11" data-target="s11"><span class="num">11</span><span class="title">Traction</span></a></li>
-    <li><a href="#s12" data-target="s12"><span class="num">12</span><span class="title">The invitation</span></a></li>
+    <li><a href="#s12" data-target="s12"><span class="num">12</span><span class="title">Team</span></a></li>
+    <li><a href="#s13" data-target="s13"><span class="num">13</span><span class="title">The invitation</span></a></li>
   </ol>
 </aside>
 
@@ -1434,10 +1538,59 @@
   <div class="folio">11</div>
 </section>
 
-<!-- 12 — ASK -->
-<section class="slide ask" id="s12">
+<!-- 12 — TEAM -->
+<section class="slide team" id="s12">
   <div class="wrap">
-    <div class="eyebrow" style="color: var(--taupe-deep);"><span class="num" style="color: var(--taupe-deep);">XI</span> The invitation</div>
+    <div class="eyebrow"><span class="num">XI</span> Behind the cuvée</div>
+    <h2 class="display" style="margin-top: 16px;">Three founders.<br/>One cuvée.</h2>
+    <hr class="rule short" />
+
+    <div class="grid-team">
+      <figure class="photo">
+        <img src="pitch-assets/team.jpg" alt="ALTER Cuvée founding team — Ina, Alexander and Ruben" loading="lazy" />
+        <figcaption>The founding team · 2025</figcaption>
+      </figure>
+
+      <div class="founders">
+        <div class="founder">
+          <div class="name">Ina Simone Averhals</div>
+          <div class="role">Company Architect · Sales</div>
+          <ul>
+            <li>Leads company strategy and financial management.</li>
+            <li>Expertise in product &amp; business development and financial management.</li>
+            <li>Serial start-up founder — co-founder of Bôtan Distillery, the first non-alcoholic distillery.</li>
+          </ul>
+        </div>
+
+        <div class="founder">
+          <div class="name">Alexander Scott Wingfield Jones</div>
+          <div class="role">Production · R&amp;D · Sales</div>
+          <ul>
+            <li>Leads R&amp;D, production and sales.</li>
+            <li>Expertise in beverage development, sales and operational management.</li>
+            <li>Entrepreneurial background in hospitality (cocktail bar) and founder of start-up "Alter".</li>
+          </ul>
+        </div>
+
+        <div class="founder">
+          <div class="name">Ruben Van Aken</div>
+          <div class="role">Brand Architect · R&amp;D · Sales</div>
+          <ul>
+            <li>Leads R&amp;D, brand strategy and marketing strategy.</li>
+            <li>Expertise in brand strategy, (digital) growth strategy &amp; content creation.</li>
+            <li>Serial start-up founder — co-founder of Bôtan Distillery, the first non-alcoholic distillery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">12</div>
+</section>
+
+<!-- 13 — ASK -->
+<section class="slide ask" id="s13">
+  <div class="wrap">
+    <div class="eyebrow" style="color: var(--taupe-deep);"><span class="num" style="color: var(--taupe-deep);">XII</span> The invitation</div>
     <h2 class="display" style="margin-top: 16px;">Build the next chapter<br/>of wine culture with us.</h2>
     <hr class="rule short" style="margin-left:auto; margin-right:auto;" />
     <p class="lead" style="margin: 32px auto 0; text-align:center;">
@@ -1455,7 +1608,7 @@
       <a href="tel:+32477666591">+32 477 666 591</a>
     </div>
   </div>
-  <div class="folio">12</div>
+  <div class="folio">13</div>
 </section>
 
 <script>
