@@ -1,7 +1,7 @@
 # ALTER Cuvée — Investor one-pager
 
 Password-gated static site deployed on GitHub Pages.
-**URL:** _set after GitHub Pages is enabled_
+**URL:** <https://airdistillations.github.io/alter-cuvee-deck/>
 **Password:** `altermethode`
 
 ## Files
