@@ -224,6 +224,15 @@
     font-weight: 500;
   }
   .topbar .left{ display: inline-flex; align-items: center; gap: 10px; }
+  .topbar .brand{
+    display: inline-flex;
+    align-items: center;
+    pointer-events: auto;   /* override topbar's pointer-events: none */
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  .topbar .brand:hover{ opacity: 0.72; }
   .topbar .left .mark{
     height: 20px;
     width: auto;
@@ -251,6 +260,8 @@
     background-position: center 40%;
     text-align: center;
     justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .cover .mark{
     display: block;
@@ -436,6 +447,14 @@
     border-right: 1px solid rgba(213,207,197,0.18);
   }
   .critique .link:last-child{ border-right: 0; }
+  .critique .step-icon{
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin-bottom: 16px;
+    color: #E5C894;
+    opacity: 0.9;
+  }
   .critique .link .cap{ color: rgba(251,248,242,0.55); }
   .critique .link h3{
     font-family: var(--serif);
@@ -502,6 +521,44 @@
     font-style: italic;
     font-variation-settings: "opsz" 144, "SOFT" 100, "wght" 380;
     color: var(--taupe-deep);
+  }
+
+  /* ---------- Aromas in phases (x-axis) ---------- */
+  .phases-x{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 8px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .phases-x .phase{
+    padding: 22px 18px 28px;
+    border-right: 1px solid var(--rule);
+  }
+  .phases-x .phase:first-child{ padding-left: 0; }
+  .phases-x .phase:last-child{ border-right: 0; padding-right: 0; }
+  .phases-x .phase .head{
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.3vw, 32px);
+    color: var(--taupe);
+    line-height: 1;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .phases-x .phase ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .phases-x .phase li{
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
   }
 
   /* ---------- Portfolio cards ---------- */
@@ -1120,18 +1177,26 @@
     .step h3{ font-size: 19px; margin-bottom: 8px; }
     .step p{ font-size: 13.5px; line-height: 1.5; }
 
-    /* ---- 08 · Aromas in phases (stack the diagram) ---- */
-    .phase-grid{
-      grid-template-columns: 1fr !important;
-      gap: 6px 0 !important;
-      margin-top: 20px !important;
-    }
-    .phase-grid > div:nth-child(odd){ padding-top: 14px; }
-    .phase-grid > div:nth-child(odd):first-child{ padding-top: 0; }
-    .phase-grid .serif[style*="font-size: 28px"]{ font-size: 22px !important; }
+    /* ---- 08 · Aromas in phases (x-axis stacks to vertical) ---- */
     #s8 .cols{ gap: 28px !important; }
     #s8 p.body.lg{ font-size: 15.5px; }
     #s8 p.body{ font-size: 14px; }
+    .phases-x{
+      grid-template-columns: 1fr;
+      margin-top: 4px;
+    }
+    .phases-x .phase{
+      padding: 18px 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .phases-x .phase:first-child{ padding-top: 14px; }
+    .phases-x .phase:last-child{ border-bottom: 0; padding-bottom: 0; }
+    .phases-x .phase .head{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .phases-x .phase li{ font-size: 13.5px; }
 
     /* ---- 09 · Portfolio (3 cuvées) ---- */
     .portfolio .grid{ gap: 18px; margin-top: 26px; }
@@ -1179,7 +1244,9 @@
 
 <header class="topbar">
   <div class="left">
-    <img class="mark" src="pitch-assets/ALTER_logo-black-landscape.svg" alt="ALTER Cuvée" />
+    <a class="brand" href="#s1" aria-label="Back to cover" data-target="s1">
+      <img class="mark" src="pitch-assets/ALTER_logo-black-landscape.svg" alt="ALTER Cuvée" />
+    </a>
   </div>
   <div class="right">Investor one-pager · 2026</div>
 </header>
@@ -1275,7 +1342,7 @@
       <div>
         <div class="eye-stat">−34<span style="font-size:0.6em;">%</span></div>
         <p class="caption" style="margin-top:12px;">Est. drop in global wine consumption,<br/>2007 → 2024 (OIV / industry data)</p>
-        <div class="eye-stat" style="margin-top:48px; font-size: clamp(40px,5vw,80px);">1 in 3</div>
+        <div class="eye-stat" style="margin-top:48px;">1 in 3</div>
         <p class="caption" style="margin-top:12px;">Gen-Z adults in Europe describe themselves<br/>as non- or low-drinkers.</p>
       </div>
     </div>
@@ -1308,16 +1375,32 @@
 
     <div class="chain">
       <div class="link">
+        <svg class="step-icon" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M17 5 h6 v4 c0 0.8 0.3 1.5 0.9 2.1 l3 3 c1.3 1.3 2.1 3.1 2.1 5 V32 c0 1.7 -1.3 3 -3 3 H14 c-1.7 0 -3 -1.3 -3 -3 V19 c0 -1.9 0.8 -3.7 2.1 -5 l3 -3 C16.7 10.5 17 9.8 17 9 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <line x1="11" y1="23" x2="29" y2="23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
         <div class="cap caption">Step 01</div>
         <h3>Poor wine made</h3>
         <p>Low-grade wine is produced at scale — the base is already compromised before processing begins.</p>
       </div>
       <div class="link">
+        <svg class="step-icon" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M6 8 H34 L25 20 V30 L15 34 V20 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <circle cx="20" cy="26" r="1.2" fill="currentColor"/>
+          <circle cx="20" cy="30" r="0.9" fill="currentColor"/>
+        </svg>
         <div class="cap caption">Step 02</div>
         <h3>Alcohol stripped</h3>
         <p>Industrial vacuum distillation or reverse osmosis strips out the alcohol — and with it the backbone of esters, flavonoids, and aromatics.</p>
       </div>
       <div class="link">
+        <svg class="step-icon" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M16 5 h8 v7 l4 10 c0.6 1.5 -0.5 3 -2.1 3 H14.1 c-1.6 0 -2.7 -1.5 -2.1 -3 l4 -10 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <line x1="16" y1="5" x2="24" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="17" cy="30" r="1" fill="currentColor"/>
+          <circle cx="22" cy="33" r="0.8" fill="currentColor"/>
+          <circle cx="20" cy="35.5" r="0.6" fill="currentColor"/>
+        </svg>
         <div class="cap caption">Step 03</div>
         <h3>Re-aromatized</h3>
         <p>The flavourless liquid is re-built with artificial flavourings, additives and preservatives. A ghost of a wine.</p>
@@ -1404,38 +1487,35 @@
           ALTER builds the <em>ritual</em> of wine: the three-act tasting arc every sommelier and every drinker recognises.
         </p>
         <p class="body">
-          Pour, swirl, nose, sip, finish. Discuss. Expect aromas to unfold, shift, and linger.
-          It is the culture of wine — in a zero-proof language.
+          We speak the same language as sommeliers and winemakers — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. Pour, swirl, nose, sip, finish. Discuss. Aromas unfold, shift, linger.
         </p>
       </div>
       <div>
-        <!-- phases diagram -->
-        <div style="border-top: 1px solid var(--rule); padding-top: 18px;">
-          <div style="display:flex; justify-content: space-between; align-items:baseline;">
-            <span class="caption">Phase</span><span class="caption">Aroma layer</span>
+        <div class="phases-x">
+          <div class="phase">
+            <div class="head">Nose</div>
+            <ul>
+              <li>Lifted florals</li>
+              <li>Citrus zest</li>
+              <li>Fresh herbs</li>
+            </ul>
           </div>
-        </div>
-        <div class="phase-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; margin-top: 24px;">
-          <div>
-            <div class="serif" style="font-size: 28px; color: var(--taupe);">Nose</div>
-            <div class="caption" style="margin-top:4px;">Primary aromas</div>
+          <div class="phase">
+            <div class="head">Palate</div>
+            <ul>
+              <li>Structure</li>
+              <li>Fruit core</li>
+              <li>Botanical depth</li>
+            </ul>
           </div>
-          <div>
-            <div class="serif" style="font-size: 16px; color: var(--ink-soft); font-style:italic;">Lifted florals, citrus zest, fresh herbs</div>
-          </div>
-          <div>
-            <div class="serif" style="font-size: 28px; color: var(--taupe);">Palate</div>
-            <div class="caption" style="margin-top:4px;">Secondary aromas</div>
-          </div>
-          <div>
-            <div class="serif" style="font-size: 16px; color: var(--ink-soft); font-style:italic;">Structure, fruit core, botanical depth</div>
-          </div>
-          <div>
-            <div class="serif" style="font-size: 28px; color: var(--taupe);">Finish</div>
-            <div class="caption" style="margin-top:4px;">Tertiary aromas</div>
-          </div>
-          <div>
-            <div class="serif" style="font-size: 16px; color: var(--ink-soft); font-style:italic;">Length, spice, minerality, maturity</div>
+          <div class="phase">
+            <div class="head">Finish</div>
+            <ul>
+              <li>Length</li>
+              <li>Spice</li>
+              <li>Minerality</li>
+              <li>Maturity</li>
+            </ul>
           </div>
         </div>
       </div>
