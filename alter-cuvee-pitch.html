@@ -170,28 +170,12 @@
   }
   .rule.short{
     width: 160px;
-    background: var(--taupe-soft);
+    background: transparent;
     margin: 32px 0;
     position: relative;
     overflow: visible;
   }
-  .rule.short::before{
-    content: "◆";
-    position: absolute;
-    top: -7px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 9px;
-    line-height: 1;
-    color: var(--taupe);
-    letter-spacing: 0;
-  }
-  .hero .rule.short,
-  .critique .rule.short,
-  .quote .rule.short{ background: rgba(229,200,148,0.45); }
-  .hero .rule.short::before,
-  .critique .rule.short::before,
-  .quote .rule.short::before{ color: #E5C894; }
+  .rule.short::before{ content: none; }
 
   .lead{
     font-family: var(--serif);
@@ -1141,10 +1125,13 @@
     .portfolio .grid{ gap: 18px; margin-top: 26px; }
     .card{ padding: 14px 14px 20px; }
     .card .bottle{
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 3 / 4;
       margin-bottom: 16px;
     }
-    .card .bottle img{ object-position: center 32%; }
+    .card .bottle img{
+      object-fit: contain;
+      object-position: center;
+    }
     .card .vintage{ font-size: 10px; }
     .card h3{ font-size: 19px; margin: 6px 0 8px; line-height: 1.1; }
     .card p{ font-size: 13.5px; line-height: 1.5; }
@@ -1542,7 +1529,7 @@
 <section class="slide team" id="s12">
   <div class="wrap">
     <div class="eyebrow"><span class="num">XI</span> Behind the cuvée</div>
-    <h2 class="display" style="margin-top: 16px;">Three founders.<br/>One cuvée.</h2>
+    <h2 class="display" style="margin-top: 16px;">Three Founders</h2>
     <hr class="rule short" />
 
     <div class="grid-team">
