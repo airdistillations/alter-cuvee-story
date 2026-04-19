@@ -208,12 +208,21 @@
   }
   .topbar .left{ display: inline-flex; align-items: center; gap: 10px; }
   .topbar .left .mark{
-    height: 16px;
+    height: 20px;
     width: auto;
     display: block;
     opacity: 0.92;
+    transition: filter 0.35s ease, opacity 0.35s ease;
   }
-  .topbar .right{ font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; color: var(--muted); font-weight: 400; }
+  .topbar .right{ font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; color: var(--muted); font-weight: 400; transition: color 0.35s ease; }
+
+  /* On dark slides, invert the logo to white and lift the right-side text */
+  .topbar.on-dark{ mix-blend-mode: normal; }
+  .topbar.on-dark .left .mark{
+    filter: invert(1) brightness(1.1);
+    opacity: 0.96;
+  }
+  .topbar.on-dark .right{ color: rgba(251, 248, 242, 0.72); }
 
   /* ---------- Cover ---------- */
   .cover{
@@ -1424,6 +1433,7 @@
 (function(){
   var darkSlides = { s2:1, s4:1, s5:1, s6:1, s10:1 };
   var nav = document.querySelector('.slide-nav');
+  var topbar = document.querySelector('.topbar');
   var drawer = document.getElementById('nav-drawer');
   var fab = document.querySelector('.nav-fab');
   var backdrop = document.querySelector('.nav-backdrop');
@@ -1438,7 +1448,9 @@
     allLinks.forEach(function(a){
       a.classList.toggle('active', a.getAttribute('data-target') === id);
     });
-    if (nav) nav.classList.toggle('on-dark', !!darkSlides[id]);
+    var onDark = !!darkSlides[id];
+    if (nav) nav.classList.toggle('on-dark', onDark);
+    if (topbar) topbar.classList.toggle('on-dark', onDark);
   }
   setActive('s1');
 
