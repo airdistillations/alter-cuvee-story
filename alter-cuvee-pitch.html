@@ -919,6 +919,120 @@
     section.slide > .wrap > *:nth-child(5){ animation-delay: 0.4s; }
     @keyframes rise { to { opacity: 1; transform: none; } }
   }
+
+  /* ---------- Mobile readability (≤860px) ----------
+     On phones, the magnetic 1-slide-per-viewport rule clips dense slides.
+     Allow content-heavy slides to grow past one viewport, relax the snap,
+     and tighten sub-layouts so 5, 6, 7, 8, 9, 11 stay readable.             */
+  @media (max-width: 860px){
+    /* Relax magnetic snap so content-dense slides can breathe */
+    html{ scroll-snap-type: y proximity; }
+
+    section.slide{
+      height: auto;
+      min-height: 100vh;             /* fallback */
+      min-height: 100svh;            /* full viewport, can grow past it */
+      padding: 56px 22px 72px;
+      scroll-snap-stop: normal;
+      justify-content: flex-start;   /* anchor content to top on mobile */
+      overflow: visible;
+    }
+    section.slide.cover{ justify-content: center; }
+
+    /* Hero slides: keep photo-led composition but top-anchor text on phone */
+    .hero .wrap{
+      padding: 64px 22px 72px;
+      min-height: 100vh;
+      min-height: 100svh;
+      justify-content: flex-start;
+    }
+
+    /* Folio tighter so it doesn't eat content */
+    .folio{ bottom: 14px; left: 22px; font-size: 10px; }
+
+    /* Display scales down a touch more on phones */
+    h2.display{ font-size: clamp(32px, 8vw, 44px); line-height: 1.05; }
+    .lead{ font-size: 18px; line-height: 1.4; }
+
+    /* ---- 05 · Critique / De-alcoholization (dark) ---- */
+    .critique .chain{
+      margin-top: 22px;
+      border-top: 0;
+      border-bottom: 0;
+    }
+    .critique .link{
+      padding: 16px 0 20px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(213,207,197,0.18);
+    }
+    .critique .link:last-child{ border-bottom: 0; }
+    .critique .link h3{ font-size: 17px; margin: 8px 0 8px; }
+    .critique .link p{ font-size: 13.5px; line-height: 1.5; }
+    .critique .verdict{
+      font-size: 17px;
+      margin: 28px 0 0;
+      padding: 20px 0 0 18px;
+      line-height: 1.4;
+    }
+    .critique .verdict::first-letter{
+      font-size: 3em;
+      margin-right: 4px;
+    }
+
+    /* ---- 06 · Manifesto / We don't tear down ---- */
+    .manifesto .big{
+      font-size: clamp(22px, 6vw, 32px) !important;
+      line-height: 1.18;
+      max-width: 100% !important;
+      margin-top: 20px !important;
+    }
+    .manifesto .cols{ margin-top: 24px !important; gap: 18px !important; }
+    .hero .lead{ font-size: 17px; }
+    .hero p.body.lg{ font-size: 15.5px; line-height: 1.55; }
+
+    /* ---- 07 · The method (3 steps) ---- */
+    .steps{ gap: 22px; margin-top: 26px; }
+    .step{ padding-top: 14px; }
+    .step .num{ margin-bottom: 12px; }
+    .step h3{ font-size: 19px; margin-bottom: 8px; }
+    .step p{ font-size: 13.5px; line-height: 1.5; }
+
+    /* ---- 08 · Aromas in phases (stack the diagram) ---- */
+    .phase-grid{
+      grid-template-columns: 1fr !important;
+      gap: 6px 0 !important;
+      margin-top: 20px !important;
+    }
+    .phase-grid > div:nth-child(odd){ padding-top: 14px; }
+    .phase-grid > div:nth-child(odd):first-child{ padding-top: 0; }
+    .phase-grid .serif[style*="font-size: 28px"]{ font-size: 22px !important; }
+    #s8 .cols{ gap: 28px !important; }
+    #s8 p.body.lg{ font-size: 15.5px; }
+    #s8 p.body{ font-size: 14px; }
+
+    /* ---- 09 · Portfolio (3 cuvées) ---- */
+    .portfolio .grid{ gap: 18px; margin-top: 26px; }
+    .card{ padding: 14px 14px 20px; }
+    .card .bottle{
+      aspect-ratio: 16 / 10;
+      margin-bottom: 16px;
+    }
+    .card .bottle img{ object-position: center 32%; }
+    .card .vintage{ font-size: 10px; }
+    .card h3{ font-size: 19px; margin: 6px 0 8px; line-height: 1.1; }
+    .card p{ font-size: 13.5px; line-height: 1.5; }
+
+    /* ---- 11 · Traction ---- */
+    .traction .list{ margin-top: 22px; }
+    .traction .row{ padding: 14px 0; gap: 4px; }
+    .traction .row .k{ font-size: 10.5px; padding-top: 0; }
+    .traction .row .v{ font-size: 16px; line-height: 1.35; }
+    .traction .row .v small{
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1160,7 +1274,7 @@
             <span class="caption">Phase</span><span class="caption">Aroma layer</span>
           </div>
         </div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; margin-top: 24px;">
+        <div class="phase-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; margin-top: 24px;">
           <div>
             <div class="serif" style="font-size: 28px; color: var(--taupe);">Nose</div>
             <div class="caption" style="margin-top:4px;">Primary aromas</div>
