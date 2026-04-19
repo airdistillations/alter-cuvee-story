@@ -406,6 +406,24 @@
     border-top: 1px solid var(--rule);
     padding-top: 20px;
   }
+  .step .step-image{
+    margin: 0 0 22px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+  .step .step-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: saturate(0.94) contrast(1.02);
+    transition: transform 0.8s ease;
+  }
+  .step:hover .step-image img{ transform: scale(1.02); }
   .step .num{
     font-family: var(--mono);
     font-size: 12px;
@@ -1173,6 +1191,7 @@
     /* ---- 07 · The method (3 steps) ---- */
     .steps{ gap: 22px; margin-top: 26px; }
     .step{ padding-top: 14px; }
+    .step .step-image{ aspect-ratio: 16 / 10; margin-bottom: 14px; }
     .step .num{ margin-bottom: 12px; }
     .step h3{ font-size: 19px; margin-bottom: 8px; }
     .step p{ font-size: 13.5px; line-height: 1.5; }
@@ -1455,16 +1474,25 @@
 
     <div class="steps">
       <div class="step">
+        <figure class="step-image">
+          <img src="pitch-assets/winegrower.jpg" alt="Winegrower in an early-harvest vineyard" loading="lazy" />
+        </figure>
         <div class="num">01</div>
         <h3>Verjus &mdash; the platform</h3>
         <p>Early-harvest grapes, picked with our winegrowers before full ripeness. This juice is the foundation — it carries the natural sour, sweet and bitter balance of the cuvée, the platform we build flavour, complexity and depth on.</p>
       </div>
       <div class="step">
+        <figure class="step-image">
+          <img src="pitch-assets/herb-grower.jpg" alt="Botanical grower tending the herb and flower beds" loading="lazy" />
+        </figure>
         <div class="num">02</div>
         <h3>Botanical distillation &mdash; the palate</h3>
         <p>Herbs, flowers and botanicals from our own cultivation, distilled in-house. These non-alcoholic distillates define the natural flavour palate — shining on the terroir-grape platform of act 01 to generate an adult depth of flavour.</p>
       </div>
       <div class="step">
+        <figure class="step-image">
+          <img src="pitch-assets/blending.jpg" alt="Blending session — assembling the cuvée" loading="lazy" />
+        </figure>
         <div class="num">03</div>
         <h3>Blending &mdash; the cuvée</h3>
         <p>Here it comes together. We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases, each with its own character: nose, palate, length.</p>
