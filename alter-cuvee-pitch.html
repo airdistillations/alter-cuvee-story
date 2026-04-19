@@ -161,6 +161,10 @@
     font-weight: 400;
   }
 
+  /* Prevent single-word orphans on the last line of every paragraph.
+     Does not apply to .display headings or other non-p elements. */
+  p{ text-wrap: pretty; }
+
   .rule{
     height: 1px;
     background: var(--rule);
@@ -444,31 +448,43 @@
   }
   .critique .link p{ color: rgba(251,248,242,0.75); font-size: 14px; margin:0; }
   .critique .verdict{
-    font-family: var(--serif);
-    font-style: italic;
-    font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 380;
-    font-size: clamp(22px, 2.1vw, 32px);
+    font-family: var(--sans);
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+    font-weight: 400;
+    font-size: clamp(17px, 1.5vw, 22px);
     color: var(--cream);
     margin: 56px 0 0;
     max-width: 920px;
-    line-height: 1.35;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
     position: relative;
     padding: 32px 0 0 28px;
     border-left: 1px solid rgba(229,200,148,0.45);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    will-change: opacity, transform;
+  }
+  .critique .verdict.is-revealed{
+    opacity: 1;
+    transform: translateY(0);
   }
   .critique .verdict::first-letter{
-    font-family: var(--serif);
-    font-style: normal;
-    font-variation-settings: "opsz" 144, "SOFT" 40, "wght" 460;
-    float: left;
-    font-size: 4.4em;
-    line-height: 0.82;
-    margin: 0.04em 0.08em 0 -0.06em;
-    color: #E5C894;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-variation-settings: normal;
+    float: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    color: inherit;
   }
   .critique .verdict em{
     color: #E5C894;
     font-style: italic;
+    font-weight: 500;
   }
 
   /* ---------- Answer manifesto ---------- */
@@ -1080,14 +1096,10 @@
     .critique .link h3{ font-size: 17px; margin: 8px 0 8px; }
     .critique .link p{ font-size: 13.5px; line-height: 1.5; }
     .critique .verdict{
-      font-size: 17px;
+      font-size: 15px;
       margin: 28px 0 0;
       padding: 20px 0 0 18px;
-      line-height: 1.4;
-    }
-    .critique .verdict::first-letter{
-      font-size: 3em;
-      margin-right: 4px;
+      line-height: 1.5;
     }
 
     /* ---- 06 · Manifesto / We don't tear down ---- */
@@ -1606,6 +1618,8 @@
   var drawer = document.getElementById('nav-drawer');
   var fab = document.querySelector('.nav-fab');
   var backdrop = document.querySelector('.nav-backdrop');
+  var verdict = document.querySelector('.critique .verdict');
+  var verdictTimer = null;
   var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll('a')) : [];
   var drawerLinks = drawer ? Array.prototype.slice.call(drawer.querySelectorAll('a')) : [];
   var allLinks = navLinks.concat(drawerLinks);
@@ -1620,6 +1634,15 @@
     var onDark = !!darkSlides[id];
     if (nav) nav.classList.toggle('on-dark', onDark);
     if (topbar) topbar.classList.toggle('on-dark', onDark);
+
+    if (verdict) {
+      if (verdictTimer) { clearTimeout(verdictTimer); verdictTimer = null; }
+      if (id === 's5') {
+        verdictTimer = setTimeout(function(){ verdict.classList.add('is-revealed'); }, 260);
+      } else {
+        verdict.classList.remove('is-revealed');
+      }
+    }
   }
   setActive('s1');
 
