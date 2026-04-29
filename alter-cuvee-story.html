@@ -223,6 +223,9 @@
     border: none;
     padding: 4px 8px;
     cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 0.18em;
@@ -616,7 +619,19 @@
   .nav-drawer a .title{ font-family: var(--serif); font-size:18px; line-height:1.2; color: var(--cream); }
   .nav-drawer a.active .num, .nav-drawer a.active .title{ color: var(--gold); }
 
-  @media (max-width: 860px){ .nav-fab,.nav-backdrop,.nav-drawer{ display:block; } .topbar .right{ display:none; } }
+  @media (max-width: 860px){
+    .nav-fab,.nav-backdrop,.nav-drawer{ display:block; }
+    .topbar .right{ display:none; }
+    .lang-switcher{ gap: 2px; }
+    .lang-switcher button{
+      min-height: 44px;
+      min-width: 36px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   @media print{ .nav-fab,.nav-backdrop,.nav-drawer{ display:none !important; } }
 
   /* ---------- Print ---------- */
