@@ -444,6 +444,17 @@
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(229,200,148,0.28);
   }
+  .manifesto .cepages{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(13px, 1vw, 15px);
+    line-height: 1.55;
+    color: rgba(229,200,148,0.85);
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(229,200,148,0.22);
+    max-width: none;
+  }
 
   /* ---------- Phases (nose / palate / finish) ---------- */
   .phases-x{
@@ -1000,11 +1011,17 @@
         <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s5-col1">
           ALTER works directly with winegrowers. We ask them to harvest earlier — verjus, the unripe grape — a juice that still holds the full flavour signature of its variety, with natural acidity and a beautiful sweet-sour balance. The soul of the terroir, intact.
         </p>
+        <p class="cepages" data-i18n="s5-col1-list">
+          We hand-select and blend different cépages: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …
+        </p>
       </div>
       <div>
         <div class="col-label" data-i18n="s5-col2-label">Herb Cultivation</div>
         <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s5-col2">
           On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.
+        </p>
+        <p class="cepages" data-i18n="s5-col2-list">
+          We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …
         </p>
       </div>
     </div>
@@ -1172,11 +1189,11 @@
       <span class="num">IX</span>
       <span data-i18n="s9-eyebrow">Already trusted</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s9-h2">Already on the best<br/>tables in Belgium.</h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s9-h2">Already on the non-alcoholic<br/>conscious tables in Belgium.</h2>
     <hr class="rule short" />
 
     <p class="body lg" style="margin-top:4px;" data-i18n="s9-lead">
-      ALTER launched in November 2025. 5,200 bottles. Sold out by December. Since then, the on-trade has been calling us — not the other way around.
+      ALTER launched in November 2025.
     </p>
 
     <p class="venues-line">
@@ -1240,7 +1257,7 @@
       <span class="num" style="color: var(--taupe-deep);">X</span>
       <span data-i18n="s10-eyebrow">The invitation</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s10-h2">Non-Alcoholic cuvées<br/><em>with a story.</em></h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s10-h2">Non-Alcoholic cuvées with a (real) story<br/><em>which starts in the vineyard.</em></h2>
     <hr class="rule short" style="margin-left:auto; margin-right:auto;" />
     <p class="lead" style="margin:32px auto 0; text-align:center;" data-i18n="s10-lead">
       We'll come to you. Walk through the story with your sommelier and your team. No obligation — just a tasting worth having.
@@ -1316,7 +1333,9 @@
       "s5-col1-label": "Grape Cultivation",
       "s5-col2-label": "Herb Cultivation",
       "s5-col1": "ALTER works directly with winegrowers. We ask them to harvest earlier — verjus, the unripe grape — a juice that still holds the full flavour signature of its variety, with natural acidity and a beautiful sweet-sour balance. The soul of the terroir, intact.",
+      "s5-col1-list": "We hand-select and blend different cépages: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
       "s5-col2": "On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.",
+      "s5-col2-list": "We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …",
       "s6-eyebrow": "The ALTER method",
       "s6-h2": "Field to bottle,\nin three acts.",
       "s6-step1-h": "Early Harvest Grapes — the platform",
@@ -1356,11 +1375,11 @@
       "s8-c3-desc": "Depth and grip. Dark fruit, spiced bark, cedar and a tannic botanical backbone. For the table, for the main course.",
       "s8-c3-pairing": "Red meats · game · aged cheeses",
       "s9-eyebrow": "Already trusted",
-      "s9-h2": "Already on the best\ntables in Belgium.",
-      "s9-lead": "ALTER launched in November 2025. 5,200 bottles. Sold out by December. Since then, the on-trade has been calling us — not the other way around.",
+      "s9-h2": "Already on the non-alcoholic\nconscious tables in Belgium.",
+      "s9-lead": "ALTER launched in November 2025.",
       "s9-more": "· and more",
       "s10-eyebrow": "The invitation",
-      "s10-h2": "Non-Alcoholic cuvées\nwith a story.",
+      "s10-h2": "Non-Alcoholic cuvées with a (real) story\nwhich starts in the vineyard.",
       "s10-lead": "We'll come to you. Walk through the story with your sommelier and your team. No obligation — just a tasting worth having.",
       "s10-vision": "We're not just solving the problem. We're giving people a reason — a vision — to drink better, with the same and even more complexity you'll find in wine.",
       "s10-cta1": "Request a tasting",
@@ -1415,7 +1434,9 @@
       "s5-col1-label": "Culture de la vigne",
       "s5-col2-label": "Culture des plantes",
       "s5-col1": "ALTER travaille directement avec les vignerons. Nous leur demandons de vendanger plus tôt — le verjus, le raisin non mûr — un jus qui conserve toute la signature aromatique de son cépage, avec une acidité naturelle et un bel équilibre aigre-doux. L'âme du terroir, intacte.",
+      "s5-col1-list": "Nous sélectionnons et assemblons à la main différents cépages : Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
       "s5-col2": "Sur cette plateforme viticole, nous construisons un second acte : nos propres distillats de plantes, fleurs et botaniques cultivés en interne. Le nez, le palais et la longueur d'un vigneron — composés avec intention, jamais imités d'une bouteille démontée.",
+      "s5-col2-list": "Nous disposons d'une bibliothèque de plus de 150 distillats naturels : Shiso, Huacatay, Verveine citronnelle, Géranium citronné, Cascara, Combava, Yuzu, Main de Bouddha, Vanille, Magnolia, …",
       "s6-eyebrow": "La méthode ALTER",
       "s6-h2": "Du champ à la bouteille,\nen trois actes.",
       "s6-step1-h": "Vendange précoce — la plateforme",
@@ -1455,11 +1476,11 @@
       "s8-c3-desc": "Profondeur et prise. Fruits noirs, écorce épicée, cèdre et une colonne vertébrale botanique tannique. Pour la table, pour le plat principal.",
       "s8-c3-pairing": "Viandes rouges · gibier · fromages affinés",
       "s9-eyebrow": "Déjà reconnu",
-      "s9-h2": "Déjà sur les meilleures\ntables de Belgique.",
-      "s9-lead": "ALTER a été lancé en novembre 2025. 5 200 bouteilles. Épuisé en décembre. Depuis, c'est la restauration qui nous appelle — pas l'inverse.",
+      "s9-h2": "Déjà sur les tables belges\nattentives au sans-alcool.",
+      "s9-lead": "ALTER a été lancé en novembre 2025.",
       "s9-more": "· et plus encore",
       "s10-eyebrow": "L'invitation",
-      "s10-h2": "Des cuvées sans alcool\navec une histoire.",
+      "s10-h2": "Des cuvées sans alcool avec une (vraie) histoire\nqui commence dans la vigne.",
       "s10-lead": "Nous venons chez vous. Nous parcourons l'histoire avec votre sommelier et votre équipe. Sans engagement — juste une dégustation qui en vaut la peine.",
       "s10-vision": "Nous ne nous contentons pas de résoudre le problème. Nous offrons une raison — une vision — : mieux boire, avec la même complexité, voire plus, que celle d'un grand vin.",
       "s10-cta1": "Demander une dégustation",
@@ -1514,7 +1535,9 @@
       "s5-col1-label": "Druiventeelt",
       "s5-col2-label": "Kruidenteelt",
       "s5-col1": "ALTER werkt rechtstreeks samen met wijnboeren. We vragen hen vroeger te oogsten — verjus, de onrijpe druif — een sap dat nog de volledige smaaksignatuur van zijn druivenras draagt, met een natuurlijke zuurgraad en een prachtige zoet-zure balans. De ziel van het terroir, intact.",
+      "s5-col1-list": "We selecteren en blenden verschillende cépages met de hand: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
       "s5-col2": "Op dat viticultureel platform bouwen we een tweede akte: onze eigen distillaten van zelfgekweekte kruiden, bloemen en botanicals. De neus, het verhemelte en de afdronk van een wijnmaker — samengesteld met intentie, niet geïmiteerd van een ontmantelde fles.",
+      "s5-col2-list": "We beschikken over een bibliotheek van 150+ natuurlijke distillaten: Shiso, Huacatay, Citroenverbena, Citroengeranium, Cascara, Kaffir Lime, Yuzu, Buddha's Hand, Vanille, Magnolia, …",
       "s6-eyebrow": "De ALTER-methode",
       "s6-h2": "Van veld tot fles,\nin drie akten.",
       "s6-step1-h": "Vroege oogst druiven — het platform",
@@ -1554,11 +1577,11 @@
       "s8-c3-desc": "Diepte en grip. Donker fruit, gekruide bast, ceder en een tannisch botanisch ruggengraat. Voor de tafel, voor het hoofdgerecht.",
       "s8-c3-pairing": "Rood vlees · wild · belegen kazen",
       "s9-eyebrow": "Al vertrouwd",
-      "s9-h2": "Al op de beste tafels\nvan België.",
-      "s9-lead": "ALTER lanceerde in november 2025. 5.200 flessen. Uitverkocht in december. Sindsdien belt de horeca ons — niet andersom.",
+      "s9-h2": "Al op de Belgische tafels\ndie alcoholvrij serieus nemen.",
+      "s9-lead": "ALTER lanceerde in november 2025.",
       "s9-more": "· en meer",
       "s10-eyebrow": "De uitnodiging",
-      "s10-h2": "Alcoholvrije cuvées\nmet een verhaal.",
+      "s10-h2": "Alcoholvrije cuvées met een (echt) verhaal\ndat in de wijngaard begint.",
       "s10-lead": "Wij komen naar u toe. We lopen het verhaal door met uw sommelier en uw team. Zonder verplichting — gewoon een proeverij die de moeite waard is.",
       "s10-vision": "We lossen niet alleen het probleem op. We geven mensen een reden — een visie — om beter te drinken, met dezelfde, en zelfs meer, complexiteit dan in wijn.",
       "s10-cta1": "Vraag een proeverij aan",
