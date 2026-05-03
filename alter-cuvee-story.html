@@ -1086,33 +1086,35 @@
           <!-- Internal divider between the two stories -->
           <line x1="42" y1="305" x2="118" y2="305" stroke-dasharray="4 4" opacity="0.6" />
 
-          <!-- TOP ZONE — grape cluster + vine leaf -->
+          <!-- TOP ZONE — single botanical leaf (Herb Cultivation) -->
           <g transform="translate(80, 232)">
-            <!-- vine stem -->
-            <line x1="0" y1="-26" x2="0" y2="-16" />
-            <!-- vine leaf -->
-            <path d="M 2 -22 Q 18 -30 22 -16 Q 16 -8 6 -14" />
-            <line x1="22" y1="-16" x2="14" y2="-20" opacity="0.6" />
-            <!-- grape cluster (6 berries, narrowing at bottom) -->
-            <circle cx="-10" cy="-3" r="5" />
-            <circle cx="0"   cy="-3" r="5" />
-            <circle cx="10"  cy="-3" r="5" />
-            <circle cx="-5"  cy="7"  r="5" />
-            <circle cx="5"   cy="7"  r="5" />
-            <circle cx="0"   cy="17" r="5" />
+            <!-- leaf outline (pointed oval, tip up) -->
+            <path d="M 0 -30 Q -16 -18 -14 -2 Q -10 14 0 22 Q 10 14 14 -2 Q 16 -18 0 -30 Z" />
+            <!-- stem extending down -->
+            <line x1="0" y1="22" x2="0" y2="32" />
+            <!-- central vein (midrib) -->
+            <line x1="0" y1="-26" x2="0" y2="20" opacity="0.7" />
+            <!-- side veins, both sides -->
+            <path d="M 0 -14 Q -5 -10 -11 -6" opacity="0.6" />
+            <path d="M 0 -14 Q  5 -10  11 -6" opacity="0.6" />
+            <path d="M 0  -2 Q -5  2  -10 8" opacity="0.6" />
+            <path d="M 0  -2 Q  5  2   10 8" opacity="0.6" />
           </g>
 
-          <!-- BOTTOM ZONE — herb sprig with alternating leaves -->
+          <!-- BOTTOM ZONE — grape cluster + vine leaf (Grape Cultivation) -->
           <g transform="translate(80, 375)">
-            <!-- main stem -->
-            <line x1="0" y1="-38" x2="0" y2="38" />
-            <!-- alternating leaves -->
-            <path d="M 0 -28 Q -8 -32 -15 -22" />
-            <path d="M 0 -16 Q  8 -20  16 -10" />
-            <path d="M 0 -4  Q -8 -8  -16  4" />
-            <path d="M 0  8  Q  8  4   15  16" />
-            <path d="M 0  20 Q -7 16  -13  26" />
-            <path d="M 0  30 Q  6 27   12  35" />
+            <!-- vine stem -->
+            <line x1="0" y1="-30" x2="0" y2="-20" />
+            <!-- vine leaf -->
+            <path d="M 2 -26 Q 18 -34 22 -20 Q 16 -12 6 -18" />
+            <line x1="22" y1="-20" x2="14" y2="-24" opacity="0.6" />
+            <!-- grape cluster (6 berries, narrowing at bottom) -->
+            <circle cx="-10" cy="-7" r="5" />
+            <circle cx="0"   cy="-7" r="5" />
+            <circle cx="10"  cy="-7" r="5" />
+            <circle cx="-5"  cy="3"  r="5" />
+            <circle cx="5"   cy="3"  r="5" />
+            <circle cx="0"   cy="13" r="5" />
           </g>
         </svg>
       </div>
