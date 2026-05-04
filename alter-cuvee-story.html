@@ -506,6 +506,21 @@
       line-height: 1.06;
     }
   }
+
+  /* Slides 08 & 09: generous top/bottom padding on desktop so content breathes */
+  @media (min-width: 901px){
+    #s8{
+      height: auto;
+      min-height: 100vh;
+      justify-content: flex-start;
+      padding-top: clamp(96px, 13vh, 152px);
+      padding-bottom: clamp(72px, 10vh, 120px);
+    }
+    #s9{
+      padding-top: clamp(112px, 14vh, 160px) !important;
+      padding-bottom: clamp(80px, 11vh, 132px) !important;
+    }
+  }
   /* Slide 05: bottle diagram between the two columns */
   .manifesto .cols{
     grid-template-columns: 1fr clamp(140px, 14vw, 200px) 1fr;
