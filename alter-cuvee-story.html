@@ -405,6 +405,23 @@
   .critique .verdict.is-revealed{ opacity: 1; transform: translateY(0); }
   .critique .verdict em{ color: var(--gold); font-style: italic; font-weight: 500; }
   .critique{ height: auto; min-height: 100vh; justify-content: flex-start; padding-top: clamp(72px, 10vh, 112px); padding-bottom: clamp(48px, 8vh, 80px); }
+  /* Slide 04: extra desktop whitespace + single-line headline */
+  @media (min-width: 901px){
+    #s4{
+      padding-top: clamp(112px, 16vh, 180px);
+      padding-bottom: clamp(96px, 13vh, 144px);
+    }
+    .s4-headline{
+      font-size: clamp(36px, 3.8vw, 54px) !important;
+      line-height: 1.12;
+      letter-spacing: -0.005em;
+    }
+    .s4-headline em{
+      margin-left: 0.18em;
+    }
+    #s4 .chain{ margin-top: 64px; }
+    #s4 .verdict{ margin-top: 64px; }
+  }
   .critique .verdict-extra{
     font-family: var(--serif);
     font-style: italic;
@@ -980,7 +997,10 @@
       <span class="num" style="color:var(--gold);">IV</span>
       <span data-i18n="s4-eyebrow">The industry's shortcut</span>
     </div>
-    <h2 class="display" style="margin-top:16px; color: var(--cream);" data-i18n="s4-h2">De-alcoholization<br/>is not respect.<br/><em style="font-style:italic; color:var(--gold); font-weight:300;">It's betrayal.</em></h2>
+    <h2 class="display s4-headline" style="margin-top:16px; color: var(--cream);">
+      <span data-i18n="s4-h2">De-alcoholization is not respect.</span>
+      <em data-i18n="s4-h2-punch" style="font-style:italic; color:var(--gold); font-weight:300;">It's betrayal.</em>
+    </h2>
     <p class="lead" style="margin-top:28px;" data-i18n="s4-sublead">
       These 0.0% wines are not fit for your table. Not even close.
     </p>
@@ -1418,7 +1438,8 @@
       "s3-stat1": "Gen-Z adults in Europe describe\nthemselves as non- or low-drinkers.",
       "s3-stat2": "Estimated drop in global wine consumption\n2007 → 2024 (OIV / industry data)",
       "s4-eyebrow": "The industry's shortcut",
-      "s4-h2": "De-alcoholization\nis not respect.\nIt's betrayal.",
+      "s4-h2": "De-alcoholization is not respect.",
+      "s4-h2-punch": "It's betrayal.",
       "s4-sublead": "These 0.0% wines are not fit for your table. Not even close.",
       "s4-lead": "Most non-alcoholic wine is built the wrong way. It is dismantled, then re-painted. Would you send that out of your kitchen?",
       "s4-step": "Step 01",
@@ -1519,7 +1540,8 @@
       "s3-stat1": "Adultes de la génération Z en Europe\nse décrivant comme non- ou petits buveurs.",
       "s3-stat2": "Chute estimée de la consommation mondiale de vin\n2007 → 2024 (OIV / données sectorielles)",
       "s4-eyebrow": "Le raccourci de l'industrie",
-      "s4-h2": "La désalcoolisation\nn'est pas du respect.\nC'est une trahison.",
+      "s4-h2": "La désalcoolisation n'est pas du respect.",
+      "s4-h2-punch": "C'est une trahison.",
       "s4-sublead": "Ces vins 0,0 % ne sont pas à la hauteur de votre table. Loin de là.",
       "s4-lead": "La plupart des vins sans alcool sont fabriqués à l'envers. Démontés, puis repeints. Vous enverriez ça en salle ?",
       "s4-step": "Étape 01",
@@ -1620,7 +1642,8 @@
       "s3-stat1": "Gen-Z-volwassenen in Europa die zichzelf\nomschrijven als niet- of weinigdrinkers.",
       "s3-stat2": "Geschatte daling van het wereldwijde wijnverbruik\n2007 → 2024 (OIV / sectordata)",
       "s4-eyebrow": "De snelkoppeling van de industrie",
-      "s4-h2": "De-alcoholisatie\nis geen respect.\nHet is verraad.",
+      "s4-h2": "De-alcoholisatie is geen respect.",
+      "s4-h2-punch": "Het is verraad.",
       "s4-sublead": "Deze 0,0%-wijnen horen niet op uw tafel. Bij lange na niet.",
       "s4-lead": "De meeste alcoholvrije wijn wordt op de verkeerde manier gemaakt. Ontmanteld, daarna opnieuw geschilderd. Zou u dat uit uw keuken sturen?",
       "s4-step": "Stap 01",
