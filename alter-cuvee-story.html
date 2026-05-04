@@ -495,6 +495,17 @@
       line-height: 1.05;
     }
   }
+
+  /* Slides 03/06/07/08: cap h2 size on desktop so the headline stays on one line across EN/FR/NL */
+  @media (min-width: 901px){
+    #s3 h2.display,
+    #s6 h2.display,
+    #s7 h2.display,
+    #s8 h2.display{
+      font-size: clamp(36px, 4.4vw, 60px);
+      line-height: 1.06;
+    }
+  }
   /* Slide 05: bottle diagram between the two columns */
   .manifesto .cols{
     grid-template-columns: 1fr clamp(140px, 14vw, 200px) 1fr;
@@ -986,7 +997,7 @@
       <span class="num">III</span>
       <span data-i18n="s3-eyebrow">The gap</span>
     </div>
-    <h2 class="display" style="margin-top:18px;" data-i18n="s3-h2">Wine lists have<br/>blind spots.</h2>
+    <h2 class="display" style="margin-top:18px;" data-i18n="s3-h2">Wine lists have blind spots.</h2>
     <hr class="rule short" />
     <div class="cols" style="margin-top:24px;">
       <div>
@@ -1189,7 +1200,7 @@
       <span class="num">VI</span>
       <span data-i18n="s6-eyebrow">The ALTER method</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s6-h2">Field to bottle,<br/>in three acts.</h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s6-h2">Field to bottle, in three acts.</h2>
     <hr class="rule short" />
 
     <div class="steps">
@@ -1232,7 +1243,10 @@
       <span class="num">VII</span>
       <span data-i18n="s7-eyebrow">The language of wine</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s7-h2">The same ritual.<br/><em>A different story.</em></h2>
+    <h2 class="display" style="margin-top:16px;">
+      <span data-i18n="s7-h2">The same ritual.</span>
+      <em data-i18n="s7-h2-punch">A different story.</em>
+    </h2>
     <p class="lead" style="margin-top:18px; max-width: 920px;" data-i18n="s7-sublead">
       We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.
     </p>
@@ -1290,7 +1304,7 @@
       <span class="num">VIII</span>
       <span data-i18n="s8-eyebrow">Our cuvées</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s8-h2">Three cuvées.<br/>Three wine moments.</h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s8-h2">Three cuvées. Three wine moments.</h2>
     <hr class="rule short" />
 
     <div class="grid">
@@ -1453,7 +1467,7 @@
       "s2-lead": "One in three guests under 40 no longer drinks. They sit at your table, open your wine list, and close it again. Not because they don't want a moment. Because nothing on your list speaks to them.",
       "s2-body": "This isn't a trend. It's a generational shift already sitting across from you every service. The question isn't whether to respond — it's how.",
       "s3-eyebrow": "The gap",
-      "s3-h2": "Wine lists have\nblind spots.",
+      "s3-h2": "Wine lists have blind spots.",
       "s3-body1": "You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (created with a bunch of added sugars and little botanicals). The moment breaks.",
       "s3-body2": "A gastronomic table deserves a gastronomic response. One that carries the same care as your wine selection — something worth discussing, worth pairing, worth coming back for.",
       "s3-stat1": "Gen-Z adults in Europe describe\nthemselves as non- or low-drinkers.",
@@ -1485,7 +1499,7 @@
       "s5-col2": "On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.",
       "s5-col2-list": "We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …",
       "s6-eyebrow": "The ALTER method",
-      "s6-h2": "Field to bottle,\nin three acts.",
+      "s6-h2": "Field to bottle, in three acts.",
       "s6-step1-h": "Early Harvest Grapes — the platform",
       "s6-step1-p": "Early-harvest grapes, picked with our winegrowers before full ripeness. This juice carries the natural sour, sweet and bitter balance of the cuvée — the terroir foundation we build everything on.",
       "s6-step2-h": "Botanical Cultivation + Distillation — the palate",
@@ -1493,7 +1507,8 @@
       "s6-step3-h": "Blending — the cuvée",
       "s6-step3-p": "We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases: nose, palate, finish. The structure a sommelier can work with.",
       "s7-eyebrow": "The language of wine",
-      "s7-h2": "The same ritual.\nA different story.",
+      "s7-h2": "The same ritual.",
+      "s7-h2-punch": "A different story.",
       "s7-sublead": "We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.",
       "s7-body1": "ALTER doesn't chase the flavour of wine — that is dealcoholization's mistake. ALTER builds the ritual of wine: the three-act tasting arc every sommelier recognises and every guest instinctively reads.",
       "s7-body2": "Pour, swirl, nose, sip, finish. Discuss. We speak the same language as your wine list — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. And that's exactly the point.",
@@ -1511,7 +1526,7 @@
       "s7-finish3": "Minerality",
       "s7-finish4": "Maturity",
       "s8-eyebrow": "Our cuvées",
-      "s8-h2": "Three cuvées.\nThree wine moments.",
+      "s8-h2": "Three cuvées. Three wine moments.",
       "s8-c1-vintage": "Sparkling · 75cl · 0.0% alc.",
       "s8-c1-desc": "A sparkling cuvée. Lifted florals of lemon geranium, a dry aperitif length. Built for the first pour of the evening.",
       "s8-pairing": "Pairing —",
@@ -1555,7 +1570,7 @@
       "s2-lead": "Un convive sur trois de moins de 40 ans ne boit plus d'alcool. Il s'assoit à votre table, ouvre votre carte des vins, et la referme. Non par manque d'envie — mais parce que rien ne lui est destiné.",
       "s2-body": "Ce n'est pas une tendance. C'est un changement générationnel déjà assis en face de vous à chaque service. La question n'est pas de savoir si vous devez répondre — mais comment.",
       "s3-eyebrow": "L'angle mort",
-      "s3-h2": "Les cartes des vins\nont des angles morts.",
+      "s3-h2": "Les cartes des vins ont des angles morts.",
       "s3-body1": "Vous avez construit une carte qui raconte une histoire. Chaque verre a un terroir, un vigneron, une raison d'être. Vous avez choisi chaque bouteille avec intention. Et puis — pour un tiers de vos convives — rien. De l'eau pétillante. Un soda, des fermentations à l'acide acétique (à coups de sucres ajoutés et d'un soupçon de plantes). Le moment se brise.",
       "s3-body2": "Une table gastronomique mérite une réponse gastronomique. Une réponse qui porte le même soin que votre sélection de vins — quelque chose qui vaut la peine d'être discuté, accordé, et qui donne envie de revenir.",
       "s3-stat1": "Adultes de la génération Z en Europe\nse décrivant comme non- ou petits buveurs.",
@@ -1587,7 +1602,7 @@
       "s5-col2": "Sur cette plateforme viticole, nous construisons un second acte : nos propres distillats de plantes, fleurs et botaniques cultivés en interne. Le nez, le palais et la longueur d'un vigneron — composés avec intention, jamais imités d'une bouteille démontée.",
       "s5-col2-list": "Nous disposons d'une bibliothèque de plus de 150 distillats naturels : Shiso, Huacatay, Verveine citronnelle, Géranium citronné, Cascara, Combava, Yuzu, Main de Bouddha, Vanille, Magnolia, …",
       "s6-eyebrow": "La méthode ALTER",
-      "s6-h2": "Du champ à la bouteille,\nen trois actes.",
+      "s6-h2": "Du champ à la bouteille, en trois actes.",
       "s6-step1-h": "Vendange précoce — la plateforme",
       "s6-step1-p": "Raisins récoltés tôt, cueillis avec nos vignerons avant pleine maturité. Ce jus porte l'équilibre naturel acide, sucré et amer de la cuvée — la fondation de terroir sur laquelle tout repose.",
       "s6-step2-h": "Culture + distillation botanique — le palais",
@@ -1595,7 +1610,8 @@
       "s6-step3-h": "Assemblage — la cuvée",
       "s6-step3-p": "Nous assemblons les deux actes comme un vigneron assemble ses cépages — en superposant pour que la cuvée s'ouvre en trois phases distinctes : nez, bouche, longueur. La structure qu'un sommelier peut travailler.",
       "s7-eyebrow": "Le langage du vin",
-      "s7-h2": "Le même rituel.\nUne autre histoire.",
+      "s7-h2": "Le même rituel.",
+      "s7-h2-punch": "Une autre histoire.",
       "s7-sublead": "Nous avons construit l'alternative pour vos moments vin — avec le même feuilletage, la même complexité adulte et le même lien avec la table.",
       "s7-body1": "ALTER ne cherche pas à reproduire le goût du vin — c'est l'erreur de la désalcoolisation. ALTER construit le rituel du vin : l'arc de dégustation en trois actes que tout sommelier reconnaît et que chaque convive lit instinctivement.",
       "s7-body2": "Verser, faire tourner, sentir, goûter, savourer la longueur. En discuter. Nous parlons le même langage que votre carte des vins — arômes primaires, secondaires et tertiaires, se déployant du nez à la bouche jusqu'à la finale. Nous goûtons simplement différemment. Et c'est exactement l'objectif.",
@@ -1613,7 +1629,7 @@
       "s7-finish3": "Minéralité",
       "s7-finish4": "Maturité",
       "s8-eyebrow": "Nos cuvées",
-      "s8-h2": "Trois cuvées.\nTrois moments vin.",
+      "s8-h2": "Trois cuvées. Trois moments vin.",
       "s8-c1-vintage": "Pétillant · 75cl · 0,0% alc.",
       "s8-c1-desc": "Une cuvée pétillante. Floraux élancés de géranium citronné, une longueur d'apéritif sèche. Conçue pour le premier verre de la soirée.",
       "s8-pairing": "Accord —",
@@ -1657,7 +1673,7 @@
       "s2-lead": "Een op drie gasten onder de 40 drinkt geen alcohol meer. Ze zitten aan uw tafel, openen uw wijnkaart en sluiten hem weer. Niet omdat ze geen moment willen — maar omdat er niets voor hen op staat.",
       "s2-body": "Dit is geen trend. Het is een generationele verschuiving die bij elk service al tegenover u zit. De vraag is niet óf u moet reageren — maar hoe.",
       "s3-eyebrow": "De blinde vlek",
-      "s3-h2": "Wijnkaarten hebben\nblinde vlekken.",
+      "s3-h2": "Wijnkaarten hebben blinde vlekken.",
       "s3-body1": "U hebt een wijnkaart gebouwd die een verhaal vertelt. Elk glas heeft een terroir, een wijnboer, een reden. U koos elke fles met intentie. En dan — voor één op drie gasten — niets. Bruiswater. Een frisdrank, azijnzure fermentaties (gemaakt met flink wat toegevoegde suiker en een paar botanicals). Het moment breekt.",
       "s3-body2": "Een gastronomische tafel verdient een gastronomisch antwoord. Iets dat dezelfde zorg draagt als uw wijnselectie — iets wat de moeite waard is om over te praten, te combineren, en om voor terug te komen.",
       "s3-stat1": "Gen-Z-volwassenen in Europa die zichzelf\nomschrijven als niet- of weinigdrinkers.",
@@ -1689,7 +1705,7 @@
       "s5-col2": "Op dat viticultureel platform bouwen we een tweede akte: onze eigen distillaten van zelfgekweekte kruiden, bloemen en botanicals. De neus, het verhemelte en de afdronk van een wijnmaker — samengesteld met intentie, niet geïmiteerd van een ontmantelde fles.",
       "s5-col2-list": "We beschikken over een bibliotheek van 150+ natuurlijke distillaten: Shiso, Huacatay, Citroenverbena, Citroengeranium, Cascara, Kaffir Lime, Yuzu, Buddha's Hand, Vanille, Magnolia, …",
       "s6-eyebrow": "De ALTER-methode",
-      "s6-h2": "Van veld tot fles,\nin drie akten.",
+      "s6-h2": "Van veld tot fles, in drie akten.",
       "s6-step1-h": "Vroege oogst druiven — het platform",
       "s6-step1-p": "Vroeg geoogste druiven, geplukt met onze wijnboeren voor volledige rijpheid. Dit sap draagt de natuurlijke zure, zoete en bittere balans van de cuvée — de terroir-fundering waarop alles gebouwd wordt.",
       "s6-step2-h": "Botanische teelt + distillatie — het verhemelte",
@@ -1697,7 +1713,8 @@
       "s6-step3-h": "Assemblage — de cuvée",
       "s6-step3-p": "We assembleren de twee akten zoals een wijnmaker zijn cépage samenstelt — in lagen zodat de cuvée in drie duidelijke fasen opent: neus, verhemelte, afdronk. De structuur waarmee een sommelier kan werken.",
       "s7-eyebrow": "De taal van wijn",
-      "s7-h2": "Hetzelfde ritueel.\nEen ander verhaal.",
+      "s7-h2": "Hetzelfde ritueel.",
+      "s7-h2-punch": "Een ander verhaal.",
       "s7-sublead": "We bouwden hét alternatief voor wijnmomenten — met dezelfde gelaagdheid, volwassen complexiteit en verbinding met eten.",
       "s7-body1": "ALTER jaagt niet op de smaak van wijn — dat is de fout van de-alcoholisatie. ALTER bouwt het ritueel van wijn: de drieaktige proefboog die elke sommelier herkent en elke gast instinctief leest.",
       "s7-body2": "Inschenken, zwenken, ruiken, proeven, de afdronk voelen. Bespreken. We spreken dezelfde taal als uw wijnkaart — primaire, secundaire en tertiaire aroma's die zich ontvouwen van neus naar verhemelte tot finish. We smaken alleen anders. En dat is precies het punt.",
@@ -1715,7 +1732,7 @@
       "s7-finish3": "Mineraliteit",
       "s7-finish4": "Rijpheid",
       "s8-eyebrow": "Onze cuvées",
-      "s8-h2": "Drie cuvées.\nDrie wijnmomenten.",
+      "s8-h2": "Drie cuvées. Drie wijnmomenten.",
       "s8-c1-vintage": "Sprankelend · 75cl · 0,0% alc.",
       "s8-c1-desc": "Een sprankelende cuvée. Opgelichte floralen van citroengeranium, een droge aperitieflengte. Gebouwd voor het eerste glas van de avond.",
       "s8-pairing": "Combinatie —",
