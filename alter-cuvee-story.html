@@ -380,10 +380,16 @@
     border-bottom: 1px solid rgba(213,207,197,0.25);
   }
   @media (max-width: 900px){ .critique .chain{ grid-template-columns: 1fr; } }
-  .critique .link{ padding: 28px 24px; border-right: 1px solid rgba(213,207,197,0.18); }
+  .critique .link{ position: relative; padding: 28px 24px; border-right: 1px solid rgba(213,207,197,0.18); }
   .critique .link:last-child{ border-right: 0; }
   .critique .step-icon{ width: 36px; height: 36px; display: block; margin-bottom: 16px; color: var(--gold); opacity: 0.9; }
-  .critique .link .cap{ color: rgba(251,248,242,0.55); }
+  .critique .link .cap{
+    color: rgba(251,248,242,0.55);
+    position: absolute;
+    top: 38px;
+    right: 24px;
+    margin: 0;
+  }
   .critique .link h3{ font-family: var(--serif); font-weight: 500; color: var(--cream); font-size: 22px; letter-spacing: var(--track); text-transform: uppercase; margin: 10px 0 10px; }
   .critique .link p{ color: rgba(251,248,242,0.75); font-size: 14px; margin:0; }
   .critique .verdict{
@@ -831,6 +837,7 @@
     .lead{ font-size:18px; line-height:1.4; }
     .critique .chain{ margin-top:22px; border-top:0; border-bottom:0; }
     .critique .link{ padding:16px 0 20px; border-right:0; border-bottom:1px solid rgba(213,207,197,0.18); }
+    .critique .link .cap{ top: 26px; right: 0; }
     .critique .link:last-child{ border-bottom:0; }
     .critique .link h3{ font-size:17px; margin:8px 0 8px; }
     .critique .link p{ font-size:13.5px; line-height:1.5; }
