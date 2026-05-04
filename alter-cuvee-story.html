@@ -482,6 +482,15 @@
     max-width: none;
   }
 
+  /* Slide 05: let the slide grow with the bottle diagram + give the headline air */
+  @media (min-width: 901px){
+    #s5{ height: auto; min-height: 100vh; }
+    #s5 .wrap{
+      justify-content: flex-start;
+      padding-top: clamp(112px, 14vh, 160px);
+      padding-bottom: clamp(72px, 10vh, 120px);
+    }
+  }
   /* Slide 05: bottle diagram between the two columns */
   .manifesto .cols{
     grid-template-columns: 1fr clamp(140px, 14vw, 200px) 1fr;
