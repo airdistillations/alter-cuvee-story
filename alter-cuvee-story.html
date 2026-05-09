@@ -413,21 +413,21 @@
   .critique{ height: auto; min-height: 100vh; justify-content: flex-start; padding-top: clamp(72px, 10vh, 112px); padding-bottom: clamp(48px, 8vh, 80px); }
   /* Slide 04: extra desktop whitespace + single-line headline */
   @media (min-width: 901px){
-    #s4{
+    #s5{
       padding-top: clamp(112px, 16vh, 180px);
       padding-bottom: clamp(96px, 13vh, 144px);
     }
-    .s4-headline{
+    .s5-headline{
       font-size: clamp(36px, 3.8vw, 54px) !important;
       line-height: 1.12;
       letter-spacing: -0.005em;
     }
-    .s4-headline em{
+    .s5-headline em{
       margin-left: 0.18em;
     }
-    #s4 .chain{ margin-top: 32px; }
-    #s4 .verdict{ margin-top: 32px; }
-    #s4 .verdict-extra{ margin-top: 18px; }
+    #s5 .chain{ margin-top: 32px; }
+    #s5 .verdict{ margin-top: 32px; }
+    #s5 .verdict-extra{ margin-top: 18px; }
   }
   .critique .verdict-extra{
     font-family: var(--serif);
@@ -484,13 +484,13 @@
 
   /* Slide 05: let the slide grow with the bottle diagram + give the headline air */
   @media (min-width: 901px){
-    #s5{ height: auto; min-height: 100vh; }
-    #s5 .wrap{
+    #s6{ height: auto; min-height: 100vh; }
+    #s6 .wrap{
       justify-content: flex-start;
       padding-top: clamp(112px, 14vh, 160px);
       padding-bottom: clamp(72px, 10vh, 120px);
     }
-    #s5 h2.display{
+    #s6 h2.display{
       font-size: clamp(40px, 5vw, 72px);
       line-height: 1.05;
     }
@@ -499,9 +499,9 @@
   /* Slides 03/06/07/08: cap h2 size on desktop so the headline stays on one line across EN/FR/NL */
   @media (min-width: 901px){
     #s3 h2.display,
-    #s6 h2.display,
     #s7 h2.display,
-    #s8 h2.display{
+    #s8 h2.display,
+    #s9 h2.display{
       font-size: clamp(36px, 4.4vw, 60px);
       line-height: 1.06;
     }
@@ -509,18 +509,18 @@
 
   /* Slides 08 & 09: generous top/bottom padding on desktop so content breathes */
   @media (min-width: 901px){
-    #s8{
+    #s9{
       height: auto;
       min-height: 100vh;
       justify-content: flex-start;
       padding-top: clamp(96px, 13vh, 152px);
       padding-bottom: clamp(72px, 10vh, 120px);
     }
-    #s9{
+    #s10{
       padding-top: clamp(200px, 22vh, 280px) !important;
       padding-bottom: clamp(96px, 12vh, 144px) !important;
     }
-    #s9 .rule.short{ margin: 10px 0; }
+    #s10 .rule.short{ margin: 10px 0; }
   }
   /* Slide 05: bottle diagram between the two columns */
   .manifesto .cols{
@@ -736,7 +736,7 @@
 
   /* ---------- Folio ---------- */
   .folio{ position:absolute; bottom:22px; left:32px; font-family: var(--mono); font-size:11px; letter-spacing:0.18em; color: var(--muted); text-transform:uppercase; }
-  .folio::after{ content:" / 10"; opacity:0.55; }
+  .folio::after{ content:" / 11"; opacity:0.55; }
 
   /* ---------- Slide nav (desktop) ---------- */
   .slide-nav{
@@ -929,13 +929,14 @@
   <a href="#s1"  data-target="s1"><span class="label"><span class="num">01</span><span class="sep"></span><span class="title" data-i18n="nav-s1">Cover</span></span><span class="tick" aria-hidden="true"></span></a>
   <a href="#s2"  data-target="s2"><span class="label"><span class="num">02</span><span class="sep"></span><span class="title" data-i18n="nav-s2">Your guest</span></span><span class="tick" aria-hidden="true"></span></a>
   <a href="#s3"  data-target="s3"><span class="label"><span class="num">03</span><span class="sep"></span><span class="title" data-i18n="nav-s3">The blind spot</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s4"  data-target="s4"><span class="label"><span class="num">04</span><span class="sep"></span><span class="title" data-i18n="nav-s4">Not good enough</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s5"  data-target="s5"><span class="label"><span class="num">05</span><span class="sep"></span><span class="title" data-i18n="nav-s5">We build</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s6"  data-target="s6"><span class="label"><span class="num">06</span><span class="sep"></span><span class="title" data-i18n="nav-s6">Three acts</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s7"  data-target="s7"><span class="label"><span class="num">07</span><span class="sep"></span><span class="title" data-i18n="nav-s7">The ritual</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s8"  data-target="s8"><span class="label"><span class="num">08</span><span class="sep"></span><span class="title" data-i18n="nav-s8">The cuvées</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s9"  data-target="s9"><span class="label"><span class="num">09</span><span class="sep"></span><span class="title" data-i18n="nav-s9">Best tables</span></span><span class="tick" aria-hidden="true"></span></a>
-  <a href="#s10" data-target="s10"><span class="label"><span class="num">10</span><span class="sep"></span><span class="title" data-i18n="nav-s10">Your invitation</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s4"  data-target="s4"><span class="label"><span class="num">04</span><span class="sep"></span><span class="title" data-i18n="nav-s4">The harvest</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s5"  data-target="s5"><span class="label"><span class="num">05</span><span class="sep"></span><span class="title" data-i18n="nav-s5">Not good enough</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s6"  data-target="s6"><span class="label"><span class="num">06</span><span class="sep"></span><span class="title" data-i18n="nav-s6">We build</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s7"  data-target="s7"><span class="label"><span class="num">07</span><span class="sep"></span><span class="title" data-i18n="nav-s7">Three acts</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s8"  data-target="s8"><span class="label"><span class="num">08</span><span class="sep"></span><span class="title" data-i18n="nav-s8">The ritual</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s9"  data-target="s9"><span class="label"><span class="num">09</span><span class="sep"></span><span class="title" data-i18n="nav-s9">The cuvées</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s10"  data-target="s10"><span class="label"><span class="num">10</span><span class="sep"></span><span class="title" data-i18n="nav-s10">Best tables</span></span><span class="tick" aria-hidden="true"></span></a>
+  <a href="#s11" data-target="s11"><span class="label"><span class="num">11</span><span class="sep"></span><span class="title" data-i18n="nav-s11">Your invitation</span></span><span class="tick" aria-hidden="true"></span></a>
 </nav>
 
 <!-- Mobile FAB -->
@@ -953,13 +954,14 @@
     <li><a href="#s1"  data-target="s1"><span class="num">01</span><span class="title" data-i18n="nav-s1">Cover</span></a></li>
     <li><a href="#s2"  data-target="s2"><span class="num">02</span><span class="title" data-i18n="nav-s2">Your guest</span></a></li>
     <li><a href="#s3"  data-target="s3"><span class="num">03</span><span class="title" data-i18n="nav-s3">The blind spot</span></a></li>
-    <li><a href="#s4"  data-target="s4"><span class="num">04</span><span class="title" data-i18n="nav-s4">Not good enough</span></a></li>
-    <li><a href="#s5"  data-target="s5"><span class="num">05</span><span class="title" data-i18n="nav-s5">We build</span></a></li>
-    <li><a href="#s6"  data-target="s6"><span class="num">06</span><span class="title" data-i18n="nav-s6">Three acts</span></a></li>
-    <li><a href="#s7"  data-target="s7"><span class="num">07</span><span class="title" data-i18n="nav-s7">The ritual</span></a></li>
-    <li><a href="#s8"  data-target="s8"><span class="num">08</span><span class="title" data-i18n="nav-s8">The cuvées</span></a></li>
-    <li><a href="#s9"  data-target="s9"><span class="num">09</span><span class="title" data-i18n="nav-s9">Best tables</span></a></li>
-    <li><a href="#s10" data-target="s10"><span class="num">10</span><span class="title" data-i18n="nav-s10">Your invitation</span></a></li>
+    <li><a href="#s4"  data-target="s4"><span class="num">04</span><span class="title" data-i18n="nav-s4">The harvest</span></a></li>
+    <li><a href="#s5"  data-target="s5"><span class="num">05</span><span class="title" data-i18n="nav-s5">Not good enough</span></a></li>
+    <li><a href="#s6"  data-target="s6"><span class="num">06</span><span class="title" data-i18n="nav-s6">We build</span></a></li>
+    <li><a href="#s7"  data-target="s7"><span class="num">07</span><span class="title" data-i18n="nav-s7">Three acts</span></a></li>
+    <li><a href="#s8"  data-target="s8"><span class="num">08</span><span class="title" data-i18n="nav-s8">The ritual</span></a></li>
+    <li><a href="#s9"  data-target="s9"><span class="num">09</span><span class="title" data-i18n="nav-s9">The cuvées</span></a></li>
+    <li><a href="#s10"  data-target="s10"><span class="num">10</span><span class="title" data-i18n="nav-s10">Best tables</span></a></li>
+    <li><a href="#s11" data-target="s11"><span class="num">11</span><span class="title" data-i18n="nav-s11">Your invitation</span></a></li>
   </ol>
 </aside>
 
@@ -1037,22 +1039,44 @@
 
 
 <!-- ══════════════════════════════════════════════
-     04 — WHAT THE MARKET OFFERS ISN'T GOOD ENOUGH
+     04 — THE HARVEST HAS NOWHERE TO GO
 ══════════════════════════════════════════════ -->
-<section class="slide critique" id="s4">
+<section class="slide hero" id="s4">
+  <div class="media" aria-hidden="true" style="background: #1c1612 url('pitch-assets/vineyard-hands.jpg') center/cover no-repeat;"></div>
+  <div class="wrap">
+    <div class="eyebrow" style="color:rgba(251,248,242,0.7);">
+      <span class="num" style="color:var(--gold);">IV</span>
+      <span data-i18n="s4-eyebrow">The consequence</span>
+    </div>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s4-h2">The harvest has nowhere to go.</h2>
+    <p class="lead" style="margin-top:24px;" data-i18n="s4-lead">
+      We love wine. But the world drinks less every year — and beautiful grapes, full of story and terroir, are being pulled up, paid to be destroyed, or left to rot.
+    </p>
+    <p class="body" style="margin-top:18px; color: rgba(251,248,242,0.78); max-width:780px;" data-i18n="s4-body">
+      Across Bordeaux, Languedoc, Rioja and beyond, vineyards are disappearing. Nearly half of some regional harvests cannot find a buyer. Behind every glass on your list is a vineyard fighting to stay alive.
+    </p>
+  </div>
+  <div class="folio" style="color:rgba(251,248,242,0.6);">04</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     05 — WHAT THE MARKET OFFERS ISN'T GOOD ENOUGH
+══════════════════════════════════════════════ -->
+<section class="slide critique" id="s5">
   <div class="wrap">
     <div class="eyebrow" style="color:rgba(251,248,242,0.6);">
       <span class="num" style="color:var(--gold);">IV</span>
-      <span data-i18n="s4-eyebrow">The industry's shortcut</span>
+      <span data-i18n="s5-eyebrow">The industry's shortcut</span>
     </div>
-    <h2 class="display s4-headline" style="margin-top:16px; color: var(--cream);">
-      <span data-i18n="s4-h2">De-alcoholization is not respect.</span>
-      <em data-i18n="s4-h2-punch" style="font-style:italic; color:var(--gold); font-weight:300;">It's betrayal.</em>
+    <h2 class="display s5-headline" style="margin-top:16px; color: var(--cream);">
+      <span data-i18n="s5-h2">De-alcoholization is not respect.</span>
+      <em data-i18n="s5-h2-punch" style="font-style:italic; color:var(--gold); font-weight:300;">It's betrayal.</em>
     </h2>
-    <p class="lead" style="margin-top:28px; margin-bottom:0.5em;" data-i18n="s4-sublead">
+    <p class="lead" style="margin-top:28px; margin-bottom:0.5em;" data-i18n="s5-sublead">
       These 0.0% wines are not fit for your table. Not even close.
     </p>
-    <p class="body" style="margin-top:6px; color: rgba(251,248,242,0.78); max-width:780px;" data-i18n="s4-lead">
+    <p class="body" style="margin-top:6px; color: rgba(251,248,242,0.78); max-width:780px;" data-i18n="s5-lead">
       Most non-alcoholic wine is built the wrong way. It is dismantled, then re-painted. Would you send that out of your kitchen?
     </p>
 
@@ -1062,9 +1086,9 @@
           <path d="M17 5 h6 v4 c0 0.8 0.3 1.5 0.9 2.1 l3 3 c1.3 1.3 2.1 3.1 2.1 5 V32 c0 1.7 -1.3 3 -3 3 H14 c-1.7 0 -3 -1.3 -3 -3 V19 c0 -1.9 0.8 -3.7 2.1 -5 l3 -3 C16.7 10.5 17 9.8 17 9 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
           <line x1="11" y1="23" x2="29" y2="23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
-        <div class="cap caption" data-i18n="s4-step">Step 01</div>
-        <h3 data-i18n="s4-step1-h">They start with poor (cheap) wine</h3>
-        <p data-i18n="s4-step1-p">Low-grade wine is produced at scale — the base is already compromised before processing begins.</p>
+        <div class="cap caption" data-i18n="s5-step">Step 01</div>
+        <h3 data-i18n="s5-step1-h">They start with poor (cheap) wine</h3>
+        <p data-i18n="s5-step1-p">Low-grade wine is produced at scale — the base is already compromised before processing begins.</p>
       </div>
       <div class="link">
         <svg class="step-icon" viewBox="0 0 40 40" aria-hidden="true">
@@ -1072,9 +1096,9 @@
           <circle cx="20" cy="26" r="1.2" fill="currentColor"/>
           <circle cx="20" cy="30" r="0.9" fill="currentColor"/>
         </svg>
-        <div class="cap caption" data-i18n="s4-step2-cap">Step 02</div>
-        <h3 data-i18n="s4-step2-h">Alcohol + flavour is stripped</h3>
-        <p data-i18n="s4-step2-p">Industrial vacuum distillation or reverse osmosis strips out the alcohol — and with it all the esters, flavonoids and aromatics that made it worth drinking.</p>
+        <div class="cap caption" data-i18n="s5-step2-cap">Step 02</div>
+        <h3 data-i18n="s5-step2-h">Alcohol + flavour is stripped</h3>
+        <p data-i18n="s5-step2-p">Industrial vacuum distillation or reverse osmosis strips out the alcohol — and with it all the esters, flavonoids and aromatics that made it worth drinking.</p>
       </div>
       <div class="link">
         <svg class="step-icon" viewBox="0 0 40 40" aria-hidden="true">
@@ -1082,48 +1106,48 @@
           <circle cx="17" cy="30" r="1" fill="currentColor"/>
           <circle cx="22" cy="33" r="0.8" fill="currentColor"/>
         </svg>
-        <div class="cap caption" data-i18n="s4-step3-cap">Step 03</div>
-        <h3 data-i18n="s4-step3-h">Re-aromatized</h3>
-        <p data-i18n="s4-step3-p">The flavourless liquid is re-built with artificial flavourings, additives and preservatives*. A ghost of a wine.</p>
-        <p class="step-note" data-i18n="s4-step3-note" style="font-size:11px; opacity:0.65; margin-top:10px; line-height:1.45;">*The alcohol is gone — but so is its preservative role, so chemical additives are added back to compensate.</p>
+        <div class="cap caption" data-i18n="s5-step3-cap">Step 03</div>
+        <h3 data-i18n="s5-step3-h">Re-aromatized</h3>
+        <p data-i18n="s5-step3-p">The flavourless liquid is re-built with artificial flavourings, additives and preservatives*. A ghost of a wine.</p>
+        <p class="step-note" data-i18n="s5-step3-note" style="font-size:11px; opacity:0.65; margin-top:10px; line-height:1.45;">*The alcohol is gone — but so is its preservative role, so chemical additives are added back to compensate.</p>
       </div>
     </div>
 
-    <p class="verdict" data-i18n="s4-verdict">
+    <p class="verdict" data-i18n="s5-verdict">
       The greatest respect one can give to wine is not to pretend to be it.
       De-alcoholization is the most disrespectful, betrayed interpretation of a non-alcoholic alternative — and your guests can taste it.
     </p>
 
-    <p class="verdict-extra" data-i18n="s4-extra">
+    <p class="verdict-extra" data-i18n="s5-extra">
       What is the story that a sommelier in a restaurant is going to present to his guests at the table? When you have mastered the teachings of wine and viticulture, surely you cannot break down that same story again? Let wine be, and remain, wine.
     </p>
   </div>
-  <div class="folio" style="color:rgba(251,248,242,0.6);">04</div>
+  <div class="folio" style="color:rgba(251,248,242,0.6);">05</div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
      05 — WE DON'T IMITATE. WE BUILD.
 ══════════════════════════════════════════════ -->
-<section class="slide hero manifesto" id="s5">
+<section class="slide hero manifesto" id="s6">
   <div class="media" aria-hidden="true" style="background: #1c1612 url('pitch-assets/citrus-hand.jpg') center/cover no-repeat;"></div>
   <div class="wrap">
     <div class="eyebrow" style="color:rgba(251,248,242,0.7);">
       <span class="num" style="color:var(--gold);">V</span>
-      <span data-i18n="s5-eyebrow">Our answer</span>
+      <span data-i18n="s6-eyebrow">Our answer</span>
     </div>
-    <h2 class="display" style="margin-top:16px; color: var(--ink-invert);" data-i18n="s5-h2">We don't tear down. We build.</h2>
+    <h2 class="display" style="margin-top:16px; color: var(--ink-invert);" data-i18n="s6-h2">We don't tear down. We build.</h2>
     <hr class="rule short" style="background:rgba(229,200,148,0.5);" />
-    <p class="big" style="margin-top:28px; color: var(--cream); font-size:clamp(28px, 3.6vw, 52px); max-width:880px;" data-i18n="s5-big">
+    <p class="big" style="margin-top:28px; color: var(--cream); font-size:clamp(28px, 3.6vw, 52px); max-width:880px;" data-i18n="s6-big">
       Old school meets new school. <em style="color:var(--gold);">Two real stories in one bottle.</em>
     </p>
     <div class="cols" style="margin-top:40px;">
       <div>
-        <div class="col-label" data-i18n="s5-col1-label">Grape Cultivation</div>
-        <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s5-col1">
+        <div class="col-label" data-i18n="s6-col1-label">Grape Cultivation</div>
+        <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s6-col1">
           ALTER works directly with winegrowers. We ask them to harvest earlier — verjus, the unripe grape — a juice that still holds the full flavour signature of its variety, with natural acidity and a beautiful sweet-sour balance. The soul of the terroir, intact.
         </p>
-        <p class="cepages" data-i18n="s5-col1-list">
+        <p class="cepages" data-i18n="s6-col1-list">
           We hand-select and blend different cépages: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …
         </p>
       </div>
@@ -1190,33 +1214,33 @@
       </div>
 
       <div>
-        <div class="col-label" data-i18n="s5-col2-label">Herb Cultivation</div>
-        <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s5-col2">
+        <div class="col-label" data-i18n="s6-col2-label">Herb Cultivation</div>
+        <p class="body lg" style="color:rgba(251,248,242,0.85); margin-top:10px;" data-i18n="s6-col2">
           On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.
         </p>
-        <p class="cepages" data-i18n="s5-col2-list">
+        <p class="cepages" data-i18n="s6-col2-list">
           We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …
         </p>
       </div>
     </div>
   </div>
-  <div class="folio" style="color:rgba(251,248,242,0.6);">05</div>
+  <div class="folio" style="color:rgba(251,248,242,0.6);">06</div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
      06 — FIELD TO BOTTLE IN THREE ACTS
 ══════════════════════════════════════════════ -->
-<section class="slide" id="s6" style="
+<section class="slide" id="s7" style="
   background-color: var(--cream);
   background-image: linear-gradient(180deg, rgba(246,241,232,0.92) 0%, rgba(237,228,210,0.96) 100%), url('pitch-assets/field-alter.jpg');
   background-size: cover; background-position: center;">
   <div class="wrap">
     <div class="eyebrow">
       <span class="num">VI</span>
-      <span data-i18n="s6-eyebrow">The ALTER method</span>
+      <span data-i18n="s7-eyebrow">The ALTER method</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s6-h2">Field to bottle, in three acts.</h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s7-h2">Field to bottle, in three acts.</h2>
     <hr class="rule short" />
 
     <div class="steps">
@@ -1225,85 +1249,24 @@
           <img src="pitch-assets/winegrower.jpg" alt="Winegrower in an early-harvest vineyard" loading="lazy" style="object-position:center 18%;" />
         </figure>
         <div class="num">01</div>
-        <h3 data-i18n="s6-step1-h">Early Harvest Grapes — the platform</h3>
-        <p data-i18n="s6-step1-p">Early-harvest grapes, picked with our winegrowers before full ripeness. This juice carries the natural sour, sweet and bitter balance of the cuvée — the terroir foundation we build everything on.</p>
+        <h3 data-i18n="s7-step1-h">Early Harvest Grapes — the platform</h3>
+        <p data-i18n="s7-step1-p">Early-harvest grapes, picked with our winegrowers before full ripeness. This juice carries the natural sour, sweet and bitter balance of the cuvée — the terroir foundation we build everything on.</p>
       </div>
       <div class="step">
         <figure class="step-image">
           <img src="pitch-assets/herb-grower.jpg" alt="Botanical grower tending the herb and flower beds" loading="lazy" />
         </figure>
         <div class="num">02</div>
-        <h3 data-i18n="s6-step2-h">Botanical Cultivation + Distillation — the palate</h3>
-        <p data-i18n="s6-step2-p">Herbs, flowers and botanicals from our own cultivation, distilled in-house. These non-alcoholic distillates define the flavour palate — adding an adult depth of complexity to the grape platform.</p>
+        <h3 data-i18n="s7-step2-h">Botanical Cultivation + Distillation — the palate</h3>
+        <p data-i18n="s7-step2-p">Herbs, flowers and botanicals from our own cultivation, distilled in-house. These non-alcoholic distillates define the flavour palate — adding an adult depth of complexity to the grape platform.</p>
       </div>
       <div class="step">
         <figure class="step-image">
           <img src="pitch-assets/blending.jpg" alt="Blending session — assembling the cuvée" loading="lazy" />
         </figure>
         <div class="num">03</div>
-        <h3 data-i18n="s6-step3-h">Blending — the cuvée</h3>
-        <p data-i18n="s6-step3-p">We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases: nose, palate, finish. The structure a sommelier can work with.</p>
-      </div>
-    </div>
-  </div>
-  <div class="folio">06</div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
-     07 — THE RITUAL (NOSE / PALATE / FINISH)
-══════════════════════════════════════════════ -->
-<section class="slide" id="s7">
-  <div class="wrap">
-    <div class="eyebrow">
-      <span class="num">VII</span>
-      <span data-i18n="s7-eyebrow">The language of wine</span>
-    </div>
-    <h2 class="display" style="margin-top:16px;">
-      <span data-i18n="s7-h2">The same ritual.</span>
-      <em data-i18n="s7-h2-punch">A different story.</em>
-    </h2>
-    <p class="lead" style="margin-top:18px; max-width: 920px;" data-i18n="s7-sublead">
-      We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.
-    </p>
-    <hr class="rule short" />
-    <div class="cols" style="margin-top:24px;">
-      <div>
-        <p class="body lg" data-i18n="s7-body1">
-          ALTER doesn't chase the flavour of wine — that is dealcoholization's mistake. ALTER builds the <em>ritual</em> of wine: the three-act tasting arc every sommelier recognises and every guest instinctively reads.
-        </p>
-        <p class="body" style="margin-top:20px;" data-i18n="s7-body2">
-          Pour, swirl, nose, sip, finish. Discuss. We speak the same language as your wine list — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. And that's exactly the point.
-        </p>
-      </div>
-      <div>
-        <div class="phases-x">
-          <div class="phase">
-            <div class="head" data-i18n="s7-nose">Nose / Aroma</div>
-            <ul>
-              <li data-i18n="s7-nose1">Lifted florals</li>
-              <li data-i18n="s7-nose2">Citrus zest</li>
-              <li data-i18n="s7-nose3">Fresh herbs</li>
-            </ul>
-          </div>
-          <div class="phase">
-            <div class="head" data-i18n="s7-palate">Palate / Mouth</div>
-            <ul>
-              <li data-i18n="s7-palate1">Structure</li>
-              <li data-i18n="s7-palate2">Fruit core</li>
-              <li data-i18n="s7-palate3">Botanical depth</li>
-            </ul>
-          </div>
-          <div class="phase">
-            <div class="head" data-i18n="s7-finish">Finish / Length</div>
-            <ul>
-              <li data-i18n="s7-finish1">Long aftertaste</li>
-              <li data-i18n="s7-finish2">Spice</li>
-              <li data-i18n="s7-finish3">Minerality</li>
-              <li data-i18n="s7-finish4">Maturity</li>
-            </ul>
-          </div>
-        </div>
+        <h3 data-i18n="s7-step3-h">Blending — the cuvée</h3>
+        <p data-i18n="s7-step3-p">We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases: nose, palate, finish. The structure a sommelier can work with.</p>
       </div>
     </div>
   </div>
@@ -1312,44 +1275,59 @@
 
 
 <!-- ══════════════════════════════════════════════
-     08 — THREE CUVÉES
+     07 — THE RITUAL (NOSE / PALATE / FINISH)
 ══════════════════════════════════════════════ -->
-<section class="slide portfolio" id="s8" style="background: var(--cream);">
+<section class="slide" id="s8">
   <div class="wrap">
     <div class="eyebrow">
-      <span class="num">VIII</span>
-      <span data-i18n="s8-eyebrow">Our cuvées</span>
+      <span class="num">VII</span>
+      <span data-i18n="s8-eyebrow">The language of wine</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s8-h2">Three cuvées. Three wine moments.</h2>
+    <h2 class="display" style="margin-top:16px;">
+      <span data-i18n="s8-h2">The same ritual.</span>
+      <em data-i18n="s8-h2-punch">A different story.</em>
+    </h2>
+    <p class="lead" style="margin-top:18px; max-width: 920px;" data-i18n="s8-sublead">
+      We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.
+    </p>
     <hr class="rule short" />
-
-    <div class="grid">
-      <div class="card">
-        <div class="bottle">
-          <img src="pitch-assets/geranium.jpg" alt="ALTER Cuvée Pétillant Geranium" loading="lazy" />
-        </div>
-        <div class="vintage" data-i18n="s8-c1-vintage">Sparkling · 75cl · 0.0% alc.</div>
-        <h3>Cuvée Pétillant<br/>Geranium</h3>
-        <p data-i18n="s8-c1-desc">A sparkling cuvée. Lifted florals of lemon geranium, a dry aperitif length. Built for the first pour of the evening.</p>
-        <div class="pairing"><span data-i18n="s8-pairing">Pairing —</span> <span data-i18n="s8-c1-pairing">Aperitif · oysters · light starters</span></div>
+    <div class="cols" style="margin-top:24px;">
+      <div>
+        <p class="body lg" data-i18n="s8-body1">
+          ALTER doesn't chase the flavour of wine — that is dealcoholization's mistake. ALTER builds the <em>ritual</em> of wine: the three-act tasting arc every sommelier recognises and every guest instinctively reads.
+        </p>
+        <p class="body" style="margin-top:20px;" data-i18n="s8-body2">
+          Pour, swirl, nose, sip, finish. Discuss. We speak the same language as your wine list — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. And that's exactly the point.
+        </p>
       </div>
-      <div class="card">
-        <div class="bottle">
-          <img src="pitch-assets/cedro.jpg" alt="ALTER Cuvée Blanc Cedro" loading="lazy" />
+      <div>
+        <div class="phases-x">
+          <div class="phase">
+            <div class="head" data-i18n="s8-nose">Nose / Aroma</div>
+            <ul>
+              <li data-i18n="s8-nose1">Lifted florals</li>
+              <li data-i18n="s8-nose2">Citrus zest</li>
+              <li data-i18n="s8-nose3">Fresh herbs</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="head" data-i18n="s8-palate">Palate / Mouth</div>
+            <ul>
+              <li data-i18n="s8-palate1">Structure</li>
+              <li data-i18n="s8-palate2">Fruit core</li>
+              <li data-i18n="s8-palate3">Botanical depth</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="head" data-i18n="s8-finish">Finish / Length</div>
+            <ul>
+              <li data-i18n="s8-finish1">Long aftertaste</li>
+              <li data-i18n="s8-finish2">Spice</li>
+              <li data-i18n="s8-finish3">Minerality</li>
+              <li data-i18n="s8-finish4">Maturity</li>
+            </ul>
+          </div>
         </div>
-        <div class="vintage" data-i18n="s8-c2-vintage">Still white · 75cl · 0.0% alc.</div>
-        <h3>Cuvée Blanc<br/>Cedro</h3>
-        <p data-i18n="s8-c2-desc">An explosion of fresh citrus and white stone fruit. Bright acidity, layered botanical mid-palate, a clean mineral finish.</p>
-        <div class="pairing"><span data-i18n="s8-pairing">Pairing —</span> <span data-i18n="s8-c2-pairing">Fish · shellfish · white meats · soft cheeses</span></div>
-      </div>
-      <div class="card">
-        <div class="bottle">
-          <img src="pitch-assets/casca.jpg" alt="ALTER Cuvée Rouge Casca" loading="lazy" />
-        </div>
-        <div class="vintage" data-i18n="s8-c3-vintage">Still red · 75cl · 0.0% alc.</div>
-        <h3>Cuvée Rouge<br/>Casca</h3>
-        <p data-i18n="s8-c3-desc">Depth and grip. Dark fruit, spiced bark, cedar and a tannic botanical backbone. For the table, for the main course.</p>
-        <div class="pairing"><span data-i18n="s8-pairing">Pairing —</span> <span data-i18n="s8-c3-pairing">Red meats · game · aged cheeses</span></div>
       </div>
     </div>
   </div>
@@ -1358,18 +1336,64 @@
 
 
 <!-- ══════════════════════════════════════════════
+     08 — THREE CUVÉES
+══════════════════════════════════════════════ -->
+<section class="slide portfolio" id="s9" style="background: var(--cream);">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="num">VIII</span>
+      <span data-i18n="s9-eyebrow">Our cuvées</span>
+    </div>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s9-h2">Three cuvées. Three wine moments.</h2>
+    <hr class="rule short" />
+
+    <div class="grid">
+      <div class="card">
+        <div class="bottle">
+          <img src="pitch-assets/geranium.jpg" alt="ALTER Cuvée Pétillant Geranium" loading="lazy" />
+        </div>
+        <div class="vintage" data-i18n="s9-c1-vintage">Sparkling · 75cl · 0.0% alc.</div>
+        <h3>Cuvée Pétillant<br/>Geranium</h3>
+        <p data-i18n="s9-c1-desc">A sparkling cuvée. Lifted florals of lemon geranium, a dry aperitif length. Built for the first pour of the evening.</p>
+        <div class="pairing"><span data-i18n="s9-pairing">Pairing —</span> <span data-i18n="s9-c1-pairing">Aperitif · oysters · light starters</span></div>
+      </div>
+      <div class="card">
+        <div class="bottle">
+          <img src="pitch-assets/cedro.jpg" alt="ALTER Cuvée Blanc Cedro" loading="lazy" />
+        </div>
+        <div class="vintage" data-i18n="s9-c2-vintage">Still white · 75cl · 0.0% alc.</div>
+        <h3>Cuvée Blanc<br/>Cedro</h3>
+        <p data-i18n="s9-c2-desc">An explosion of fresh citrus and white stone fruit. Bright acidity, layered botanical mid-palate, a clean mineral finish.</p>
+        <div class="pairing"><span data-i18n="s9-pairing">Pairing —</span> <span data-i18n="s9-c2-pairing">Fish · shellfish · white meats · soft cheeses</span></div>
+      </div>
+      <div class="card">
+        <div class="bottle">
+          <img src="pitch-assets/casca.jpg" alt="ALTER Cuvée Rouge Casca" loading="lazy" />
+        </div>
+        <div class="vintage" data-i18n="s9-c3-vintage">Still red · 75cl · 0.0% alc.</div>
+        <h3>Cuvée Rouge<br/>Casca</h3>
+        <p data-i18n="s9-c3-desc">Depth and grip. Dark fruit, spiced bark, cedar and a tannic botanical backbone. For the table, for the main course.</p>
+        <div class="pairing"><span data-i18n="s9-pairing">Pairing —</span> <span data-i18n="s9-c3-pairing">Red meats · game · aged cheeses</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">09</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
      09 — ALREADY ON THE BEST TABLES
 ══════════════════════════════════════════════ -->
-<section class="slide proof" id="s9">
+<section class="slide proof" id="s10">
   <div class="wrap">
     <div class="eyebrow">
       <span class="num">IX</span>
-      <span data-i18n="s9-eyebrow">Already trusted</span>
+      <span data-i18n="s10-eyebrow">Already trusted</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s9-h2">Already on the non-alcoholic<br/>conscious tables in Belgium.</h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s10-h2">Already on the non-alcoholic<br/>conscious tables in Belgium.</h2>
     <hr class="rule short" />
 
-    <p class="body lg" style="margin-top:4px;" data-i18n="s9-lead">
+    <p class="body lg" style="margin-top:4px;" data-i18n="s10-lead">
       ALTER launched in November 2025.
     </p>
 
@@ -1399,7 +1423,7 @@
       <span class="vname">Soixante</span>
       <span class="dot">·</span>
       <span class="vname">Eldo</span>
-      <span class="dot more" data-i18n="s9-more">· and more</span>
+      <span class="dot more" data-i18n="s10-more">· and more</span>
     </p>
 
     <div class="press-clippings">
@@ -1421,31 +1445,31 @@
       </div>
     </div>
   </div>
-  <div class="folio">09</div>
+  <div class="folio">10</div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════
      10 — THE INVITATION
 ══════════════════════════════════════════════ -->
-<section class="slide ask" id="s10">
+<section class="slide ask" id="s11">
   <div class="wrap">
     <div class="eyebrow" style="color: var(--taupe-deep);">
       <span class="num" style="color: var(--taupe-deep);">X</span>
-      <span data-i18n="s10-eyebrow">The invitation</span>
+      <span data-i18n="s11-eyebrow">The invitation</span>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s10-h2">Non-Alcoholic cuvées with a (real) story<br/><em>which starts in the vineyard.</em></h2>
+    <h2 class="display" style="margin-top:16px;" data-i18n="s11-h2">Non-Alcoholic cuvées with a (real) story<br/><em>which starts in the vineyard.</em></h2>
     <hr class="rule short" style="margin-left:auto; margin-right:auto;" />
-    <p class="lead" style="margin:32px auto 0; text-align:center;" data-i18n="s10-lead">
+    <p class="lead" style="margin:32px auto 0; text-align:center;" data-i18n="s11-lead">
       We'll come to you. Walk through the story with your sommelier and your team. No obligation — just a tasting worth having.
     </p>
-    <p class="body lg" style="margin:24px auto 0; text-align:center; max-width: 760px; color: var(--ink-soft);" data-i18n="s10-vision">
+    <p class="body lg" style="margin:24px auto 0; text-align:center; max-width: 760px; color: var(--ink-soft);" data-i18n="s11-vision">
       We're not just solving the problem. We're giving people a reason — a vision — to drink better, with the same and even more complexity you'll find in wine.
     </p>
 
     <div class="actions">
-      <a href="mailto:hi@airdistillations.com" class="primary" data-i18n="s10-cta1">Request a tasting</a>
-      <a href="mailto:hi@airdistillations.com" data-i18n="s10-cta2">Ask us anything</a>
+      <a href="mailto:hi@airdistillations.com" class="primary" data-i18n="s11-cta1">Request a tasting</a>
+      <a href="mailto:hi@airdistillations.com" data-i18n="s11-cta2">Ask us anything</a>
     </div>
 
     <div class="contact">
@@ -1454,7 +1478,7 @@
       <a href="tel:+32477666591">+32 477 666 591</a>
     </div>
   </div>
-  <div class="folio">10</div>
+  <div class="folio">11</div>
 </section>
 
 
@@ -1466,13 +1490,14 @@
       "nav-s1": "Cover",
       "nav-s2": "The guest",
       "nav-s3": "The blind spot",
-      "nav-s4": "Not good enough",
-      "nav-s5": "We build",
-      "nav-s6": "Three acts",
-      "nav-s7": "The ritual",
-      "nav-s8": "The cuvées",
-      "nav-s9": "Best tables",
-      "nav-s10": "Your invitation",
+      "nav-s4": "The harvest",
+      "nav-s5": "Not good enough",
+      "nav-s6": "We build",
+      "nav-s7": "Three acts",
+      "nav-s8": "The ritual",
+      "nav-s9": "The cuvées",
+      "nav-s10": "Best tables",
+      "nav-s11": "Your invitation",
       "drawer-subtitle": "For your table · 2026",
       "cover-sub": "For your table",
       "cover-tagline": "An alternative for your wine moments",
@@ -1488,94 +1513,99 @@
       "s3-body2": "A gastronomic table deserves a gastronomic response. One that carries the same care as your wine selection — something worth discussing, worth pairing, worth coming back for.",
       "s3-stat1": "Gen-Z adults in Europe describe\nthemselves as non- or low-drinkers.",
       "s3-stat2": "Estimated drop in global wine consumption\n2007 → 2024 (OIV / industry data)",
-      "s4-eyebrow": "The industry's shortcut",
-      "s4-h2": "De-alcoholization is not respect.",
-      "s4-h2-punch": "It's betrayal.",
-      "s4-sublead": "These 0.0% wines are not fit for your table. Not even close.",
-      "s4-lead": "Most non-alcoholic wine is built the wrong way. It is dismantled, then re-painted. Would you send that out of your kitchen?",
-      "s4-step": "Step 01",
-      "s4-step1-h": "They start with poor (cheap) wine",
-      "s4-step1-p": "Low-grade wine is produced at scale — the base is already compromised before processing begins.",
-      "s4-step2-cap": "Step 02",
-      "s4-step2-h": "Alcohol + flavour is stripped",
-      "s4-step2-p": "Industrial vacuum distillation or reverse osmosis strips out the alcohol — and with it all the esters, flavonoids and aromatics that made it worth drinking.",
-      "s4-step3-cap": "Step 03",
-      "s4-step3-h": "Re-aromatized",
-      "s4-step3-p": "The flavourless liquid is re-built with artificial flavourings, additives and preservatives*. A ghost of a wine.",
-      "s4-step3-note": "*The alcohol is gone — but so is its preservative role, so chemical additives are added back to compensate.",
-      "s4-verdict": "The greatest respect one can give to wine is not to pretend to be it. De-alcoholization is the most disrespectful, betrayed interpretation of a non-alcoholic alternative — and your guests can taste it.",
-      "s4-extra": "What story is a sommelier going to tell their guests at the table? Once you've mastered the teachings of wine and viticulture, surely you cannot break that same story down again? Let wine be — and remain — wine.",
-      "s5-eyebrow": "Our answer",
-      "s5-h2": "We don't tear down. We build.",
-      "s5-big": "Old school meets new school. Two real stories in one bottle.",
-      "s5-col1-label": "Grape Cultivation",
-      "s5-col2-label": "Herb Cultivation",
-      "s5-col1": "ALTER works directly with winegrowers. We ask them to harvest earlier — verjus, the unripe grape — a juice that still holds the full flavour signature of its variety, with natural acidity and a beautiful sweet-sour balance. The soul of the terroir, intact.",
-      "s5-col1-list": "We hand-select and blend different cépages: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
-      "s5-col2": "On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.",
-      "s5-col2-list": "We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …",
-      "s6-eyebrow": "The ALTER method",
-      "s6-h2": "Field to bottle, in three acts.",
-      "s6-step1-h": "Early Harvest Grapes — the platform",
-      "s6-step1-p": "Early-harvest grapes, picked with our winegrowers before full ripeness. This juice carries the natural sour, sweet and bitter balance of the cuvée — the terroir foundation we build everything on.",
-      "s6-step2-h": "Botanical Cultivation + Distillation — the palate",
-      "s6-step2-p": "Herbs, flowers and botanicals from our own cultivation, distilled in-house. These non-alcoholic distillates define the flavour palate — adding an adult depth of complexity to the grape platform.",
-      "s6-step3-h": "Blending — the cuvée",
-      "s6-step3-p": "We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases: nose, palate, finish. The structure a sommelier can work with.",
-      "s7-eyebrow": "The language of wine",
-      "s7-h2": "The same ritual.",
-      "s7-h2-punch": "A different story.",
-      "s7-sublead": "We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.",
-      "s7-body1": "ALTER doesn't chase the flavour of wine — that is dealcoholization's mistake. ALTER builds the ritual of wine: the three-act tasting arc every sommelier recognises and every guest instinctively reads.",
-      "s7-body2": "Pour, swirl, nose, sip, finish. Discuss. We speak the same language as your wine list — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. And that's exactly the point.",
-      "s7-nose": "Nose / Aroma",
-      "s7-nose1": "Lifted florals",
-      "s7-nose2": "Citrus zest",
-      "s7-nose3": "Fresh herbs",
-      "s7-palate": "Palate / Mouth",
-      "s7-palate1": "Structure",
-      "s7-palate2": "Fruit core",
-      "s7-palate3": "Botanical depth",
-      "s7-finish": "Finish / Length",
-      "s7-finish1": "Long aftertaste",
-      "s7-finish2": "Spice",
-      "s7-finish3": "Minerality",
-      "s7-finish4": "Maturity",
-      "s8-eyebrow": "Our cuvées",
-      "s8-h2": "Three cuvées. Three wine moments.",
-      "s8-c1-vintage": "Sparkling · 75cl · 0.0% alc.",
-      "s8-c1-desc": "A sparkling cuvée. Lifted florals of lemon geranium, a dry aperitif length. Built for the first pour of the evening.",
-      "s8-pairing": "Pairing —",
-      "s8-c1-pairing": "Aperitif · oysters · light starters",
-      "s8-c2-vintage": "Still white · 75cl · 0.0% alc.",
-      "s8-c2-desc": "An explosion of fresh citrus and white stone fruit. Bright acidity, layered botanical mid-palate, a clean mineral finish.",
-      "s8-c2-pairing": "Fish · shellfish · white meats · soft cheeses",
-      "s8-c3-vintage": "Still red · 75cl · 0.0% alc.",
-      "s8-c3-desc": "Depth and grip. Dark fruit, spiced bark, cedar and a tannic botanical backbone. For the table, for the main course.",
-      "s8-c3-pairing": "Red meats · game · aged cheeses",
-      "s9-eyebrow": "Already trusted",
-      "s9-h2": "Already on the non-alcoholic\nconscious tables in Belgium.",
-      "s9-lead": "ALTER launched in November 2025.",
-      "s9-more": "· and more",
-      "s10-eyebrow": "The invitation",
-      "s10-h2": "Non-Alcoholic cuvées with a (real) story\nwhich starts in the vineyard.",
-      "s10-lead": "We'll come to you. Walk through the story with your sommelier and your team. No obligation — just a tasting worth having.",
-      "s10-vision": "We're not just solving the problem. We're giving people a reason — a vision — to drink better, with the same and even more complexity you'll find in wine.",
-      "s10-cta1": "Request a tasting",
-      "s10-cta2": "Ask us anything"
+      "s4-eyebrow": "The consequence",
+      "s4-h2": "The harvest has nowhere to go.",
+      "s4-lead": "We love wine. But the world drinks less every year — and beautiful grapes, full of story and terroir, are being pulled up, paid to be destroyed, or left to rot.",
+      "s4-body": "Across Bordeaux, Languedoc, Rioja and beyond, vineyards are disappearing. Nearly half of some regional harvests cannot find a buyer. Behind every glass on your list is a vineyard fighting to stay alive.",
+      "s5-eyebrow": "The industry's shortcut",
+      "s5-h2": "De-alcoholization is not respect.",
+      "s5-h2-punch": "It's betrayal.",
+      "s5-sublead": "These 0.0% wines are not fit for your table. Not even close.",
+      "s5-lead": "Most non-alcoholic wine is built the wrong way. It is dismantled, then re-painted. Would you send that out of your kitchen?",
+      "s5-step": "Step 01",
+      "s5-step1-h": "They start with poor (cheap) wine",
+      "s5-step1-p": "Low-grade wine is produced at scale — the base is already compromised before processing begins.",
+      "s5-step2-cap": "Step 02",
+      "s5-step2-h": "Alcohol + flavour is stripped",
+      "s5-step2-p": "Industrial vacuum distillation or reverse osmosis strips out the alcohol — and with it all the esters, flavonoids and aromatics that made it worth drinking.",
+      "s5-step3-cap": "Step 03",
+      "s5-step3-h": "Re-aromatized",
+      "s5-step3-p": "The flavourless liquid is re-built with artificial flavourings, additives and preservatives*. A ghost of a wine.",
+      "s5-step3-note": "*The alcohol is gone — but so is its preservative role, so chemical additives are added back to compensate.",
+      "s5-verdict": "The greatest respect one can give to wine is not to pretend to be it. De-alcoholization is the most disrespectful, betrayed interpretation of a non-alcoholic alternative — and your guests can taste it.",
+      "s5-extra": "What story is a sommelier going to tell their guests at the table? Once you've mastered the teachings of wine and viticulture, surely you cannot break that same story down again? Let wine be — and remain — wine.",
+      "s6-eyebrow": "Our answer",
+      "s6-h2": "We don't tear down. We build.",
+      "s6-big": "Old school meets new school. Two real stories in one bottle.",
+      "s6-col1-label": "Grape Cultivation",
+      "s6-col2-label": "Herb Cultivation",
+      "s6-col1": "ALTER works directly with winegrowers. We ask them to harvest earlier — verjus, the unripe grape — a juice that still holds the full flavour signature of its variety, with natural acidity and a beautiful sweet-sour balance. The soul of the terroir, intact.",
+      "s6-col1-list": "We hand-select and blend different cépages: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
+      "s6-col2": "On that viticultural platform we build a second act: our own distillates from self-cultivated herbs, flowers and botanicals. A winemaker's nose, palate and finish — composed with intention, not imitated from a bottle being dismantled.",
+      "s6-col2-list": "We have a library of 150+ natural distillations: Shiso, Huacatay, Lime Verbena, Lemon Geranium, Cascara, Kaffir Lime, Yuzu, Hand of Buddha, Vanilla, Magnolia, …",
+      "s7-eyebrow": "The ALTER method",
+      "s7-h2": "Field to bottle, in three acts.",
+      "s7-step1-h": "Early Harvest Grapes — the platform",
+      "s7-step1-p": "Early-harvest grapes, picked with our winegrowers before full ripeness. This juice carries the natural sour, sweet and bitter balance of the cuvée — the terroir foundation we build everything on.",
+      "s7-step2-h": "Botanical Cultivation + Distillation — the palate",
+      "s7-step2-p": "Herbs, flowers and botanicals from our own cultivation, distilled in-house. These non-alcoholic distillates define the flavour palate — adding an adult depth of complexity to the grape platform.",
+      "s7-step3-h": "Blending — the cuvée",
+      "s7-step3-p": "We blend the two acts the way a winemaker assembles cépages — layering so the cuvée opens in three distinct phases: nose, palate, finish. The structure a sommelier can work with.",
+      "s8-eyebrow": "The language of wine",
+      "s8-h2": "The same ritual.",
+      "s8-h2-punch": "A different story.",
+      "s8-sublead": "We built the alternative for wine moments — with the same layering, adult complexity, and connection with food.",
+      "s8-body1": "ALTER doesn't chase the flavour of wine — that is dealcoholization's mistake. ALTER builds the ritual of wine: the three-act tasting arc every sommelier recognises and every guest instinctively reads.",
+      "s8-body2": "Pour, swirl, nose, sip, finish. Discuss. We speak the same language as your wine list — primary, secondary and tertiary aromas, unfolding from nose to palate to finish. We just taste different. And that's exactly the point.",
+      "s8-nose": "Nose / Aroma",
+      "s8-nose1": "Lifted florals",
+      "s8-nose2": "Citrus zest",
+      "s8-nose3": "Fresh herbs",
+      "s8-palate": "Palate / Mouth",
+      "s8-palate1": "Structure",
+      "s8-palate2": "Fruit core",
+      "s8-palate3": "Botanical depth",
+      "s8-finish": "Finish / Length",
+      "s8-finish1": "Long aftertaste",
+      "s8-finish2": "Spice",
+      "s8-finish3": "Minerality",
+      "s8-finish4": "Maturity",
+      "s9-eyebrow": "Our cuvées",
+      "s9-h2": "Three cuvées. Three wine moments.",
+      "s9-c1-vintage": "Sparkling · 75cl · 0.0% alc.",
+      "s9-c1-desc": "A sparkling cuvée. Lifted florals of lemon geranium, a dry aperitif length. Built for the first pour of the evening.",
+      "s9-pairing": "Pairing —",
+      "s9-c1-pairing": "Aperitif · oysters · light starters",
+      "s9-c2-vintage": "Still white · 75cl · 0.0% alc.",
+      "s9-c2-desc": "An explosion of fresh citrus and white stone fruit. Bright acidity, layered botanical mid-palate, a clean mineral finish.",
+      "s9-c2-pairing": "Fish · shellfish · white meats · soft cheeses",
+      "s9-c3-vintage": "Still red · 75cl · 0.0% alc.",
+      "s9-c3-desc": "Depth and grip. Dark fruit, spiced bark, cedar and a tannic botanical backbone. For the table, for the main course.",
+      "s9-c3-pairing": "Red meats · game · aged cheeses",
+      "s10-eyebrow": "Already trusted",
+      "s10-h2": "Already on the non-alcoholic\nconscious tables in Belgium.",
+      "s10-lead": "ALTER launched in November 2025.",
+      "s10-more": "· and more",
+      "s11-eyebrow": "The invitation",
+      "s11-h2": "Non-Alcoholic cuvées with a (real) story\nwhich starts in the vineyard.",
+      "s11-lead": "We'll come to you. Walk through the story with your sommelier and your team. No obligation — just a tasting worth having.",
+      "s11-vision": "We're not just solving the problem. We're giving people a reason — a vision — to drink better, with the same and even more complexity you'll find in wine.",
+      "s11-cta1": "Request a tasting",
+      "s11-cta2": "Ask us anything"
     },
 
     fr: {
       "nav-s1": "Couverture",
       "nav-s2": "Le client",
       "nav-s3": "L'angle mort",
-      "nav-s4": "Pas à la hauteur",
-      "nav-s5": "Nous construisons",
-      "nav-s6": "Trois actes",
-      "nav-s7": "Le rituel",
-      "nav-s8": "Les cuvées",
-      "nav-s9": "Meilleures tables",
-      "nav-s10": "L'invitation",
+      "nav-s4": "La récolte",
+      "nav-s5": "Pas à la hauteur",
+      "nav-s6": "Nous construisons",
+      "nav-s7": "Trois actes",
+      "nav-s8": "Le rituel",
+      "nav-s9": "Les cuvées",
+      "nav-s10": "Meilleures tables",
+      "nav-s11": "L'invitation",
       "drawer-subtitle": "Pour votre table · 2026",
       "cover-sub": "Pour votre table",
       "cover-tagline": "Une alternative pour vos moments vin",
@@ -1591,94 +1621,99 @@
       "s3-body2": "Une table gastronomique mérite une réponse gastronomique. Une réponse qui porte le même soin que votre sélection de vins — quelque chose qui vaut la peine d'être discuté, accordé, et qui donne envie de revenir.",
       "s3-stat1": "Adultes de la génération Z en Europe\nse décrivant comme non- ou petits buveurs.",
       "s3-stat2": "Chute estimée de la consommation mondiale de vin\n2007 → 2024 (OIV / données sectorielles)",
-      "s4-eyebrow": "Le raccourci de l'industrie",
-      "s4-h2": "La désalcoolisation n'est pas du respect.",
-      "s4-h2-punch": "C'est une trahison.",
-      "s4-sublead": "Ces vins 0,0 % ne sont pas à la hauteur de votre table. Loin de là.",
-      "s4-lead": "La plupart des vins sans alcool sont fabriqués à l'envers. Démontés, puis repeints. Vous enverriez ça en salle ?",
-      "s4-step": "Étape 01",
-      "s4-step1-h": "On part d'un mauvais vin (bon marché)",
-      "s4-step1-p": "Du vin de qualité médiocre est produit en grande quantité — la base est déjà compromise avant même le traitement.",
-      "s4-step2-cap": "Étape 02",
-      "s4-step2-h": "L'alcool et les arômes sont extraits",
-      "s4-step2-p": "La distillation sous vide industrielle ou l'osmose inverse extrait l'alcool — et avec lui tous les esters, flavonoïdes et aromatiques qui faisaient l'intérêt du vin.",
-      "s4-step3-cap": "Étape 03",
-      "s4-step3-h": "Ré-aromatisé",
-      "s4-step3-p": "Le liquide sans saveur est reconstruit avec des arômes artificiels, des additifs et des conservateurs*. L'ombre d'un vin.",
-      "s4-step3-note": "*L'alcool a disparu — mais avec lui son rôle de conservateur. Des additifs chimiques sont alors ajoutés pour compenser.",
-      "s4-verdict": "Le plus grand respect que l'on puisse avoir pour le vin, c'est de ne pas prétendre l'être. La désalcoolisation est l'interprétation la plus irrespectueuse d'une alternative sans alcool — et vos convives le sentent.",
-      "s4-extra": "Quelle histoire un sommelier va-t-il raconter à ses convives à table ? Quand on a maîtrisé l'art du vin et de la viticulture, on ne peut pas déconstruire cette même histoire. Laissons le vin être — et rester — du vin.",
-      "s5-eyebrow": "Notre réponse",
-      "s5-h2": "Nous ne déconstruisons pas. Nous construisons.",
-      "s5-big": "L'ancien rencontre le nouveau. Deux vraies histoires dans une bouteille.",
-      "s5-col1-label": "Culture de la vigne",
-      "s5-col2-label": "Culture des plantes",
-      "s5-col1": "ALTER travaille directement avec les vignerons. Nous leur demandons de vendanger plus tôt — le verjus, le raisin non mûr — un jus qui conserve toute la signature aromatique de son cépage, avec une acidité naturelle et un bel équilibre aigre-doux. L'âme du terroir, intacte.",
-      "s5-col1-list": "Nous sélectionnons et assemblons à la main différents cépages : Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
-      "s5-col2": "Sur cette plateforme viticole, nous construisons un second acte : nos propres distillats de plantes, fleurs et botaniques cultivés en interne. Le nez, le palais et la longueur d'un vigneron — composés avec intention, jamais imités d'une bouteille démontée.",
-      "s5-col2-list": "Nous disposons d'une bibliothèque de plus de 150 distillats naturels : Shiso, Huacatay, Verveine citronnelle, Géranium citronné, Cascara, Combava, Yuzu, Main de Bouddha, Vanille, Magnolia, …",
-      "s6-eyebrow": "La méthode ALTER",
-      "s6-h2": "Du champ à la bouteille, en trois actes.",
-      "s6-step1-h": "Vendange précoce — la plateforme",
-      "s6-step1-p": "Raisins récoltés tôt, cueillis avec nos vignerons avant pleine maturité. Ce jus porte l'équilibre naturel acide, sucré et amer de la cuvée — la fondation de terroir sur laquelle tout repose.",
-      "s6-step2-h": "Culture + distillation botanique — le palais",
-      "s6-step2-p": "Herbes, fleurs et botaniques de notre propre culture, distillées en interne. Ces distillats non alcoolisés définissent la palette aromatique — ajoutant une profondeur adulte à la plateforme de raisin.",
-      "s6-step3-h": "Assemblage — la cuvée",
-      "s6-step3-p": "Nous assemblons les deux actes comme un vigneron assemble ses cépages — en superposant pour que la cuvée s'ouvre en trois phases distinctes : nez, bouche, longueur. La structure qu'un sommelier peut travailler.",
-      "s7-eyebrow": "Le langage du vin",
-      "s7-h2": "Le même rituel.",
-      "s7-h2-punch": "Une autre histoire.",
-      "s7-sublead": "Nous avons construit l'alternative pour vos moments vin — avec le même feuilletage, la même complexité adulte et le même lien avec la table.",
-      "s7-body1": "ALTER ne cherche pas à reproduire le goût du vin — c'est l'erreur de la désalcoolisation. ALTER construit le rituel du vin : l'arc de dégustation en trois actes que tout sommelier reconnaît et que chaque convive lit instinctivement.",
-      "s7-body2": "Verser, faire tourner, sentir, goûter, savourer la longueur. En discuter. Nous parlons le même langage que votre carte des vins — arômes primaires, secondaires et tertiaires, se déployant du nez à la bouche jusqu'à la finale. Nous goûtons simplement différemment. Et c'est exactement l'objectif.",
-      "s7-nose": "Nez / Arômes",
-      "s7-nose1": "Floraux élancés",
-      "s7-nose2": "Zeste d'agrumes",
-      "s7-nose3": "Herbes fraîches",
-      "s7-palate": "Palais / Bouche",
-      "s7-palate1": "Structure",
-      "s7-palate2": "Cœur de fruit",
-      "s7-palate3": "Profondeur botanique",
-      "s7-finish": "Finale / Longueur",
-      "s7-finish1": "Longue persistance",
-      "s7-finish2": "Épices",
-      "s7-finish3": "Minéralité",
-      "s7-finish4": "Maturité",
-      "s8-eyebrow": "Nos cuvées",
-      "s8-h2": "Trois cuvées. Trois moments vin.",
-      "s8-c1-vintage": "Pétillant · 75cl · 0,0% alc.",
-      "s8-c1-desc": "Une cuvée pétillante. Floraux élancés de géranium citronné, une longueur d'apéritif sèche. Conçue pour le premier verre de la soirée.",
-      "s8-pairing": "Accord —",
-      "s8-c1-pairing": "Apéritif · huîtres · entrées légères",
-      "s8-c2-vintage": "Blanc tranquille · 75cl · 0,0% alc.",
-      "s8-c2-desc": "Une explosion d'agrumes frais et de fruits à noyau blancs. Acidité vive, milieu de bouche botanique structuré, finale minérale nette.",
-      "s8-c2-pairing": "Poisson · fruits de mer · volailles · fromages doux",
-      "s8-c3-vintage": "Rouge tranquille · 75cl · 0,0% alc.",
-      "s8-c3-desc": "Profondeur et prise. Fruits noirs, écorce épicée, cèdre et une colonne vertébrale botanique tannique. Pour la table, pour le plat principal.",
-      "s8-c3-pairing": "Viandes rouges · gibier · fromages affinés",
-      "s9-eyebrow": "Déjà reconnu",
-      "s9-h2": "Déjà sur les tables belges\nattentives au sans-alcool.",
-      "s9-lead": "ALTER a été lancé en novembre 2025.",
-      "s9-more": "· et plus encore",
-      "s10-eyebrow": "L'invitation",
-      "s10-h2": "Des cuvées sans alcool avec une (vraie) histoire\nqui commence dans la vigne.",
-      "s10-lead": "Nous venons chez vous. Nous parcourons l'histoire avec votre sommelier et votre équipe. Sans engagement — juste une dégustation qui en vaut la peine.",
-      "s10-vision": "Nous ne nous contentons pas de résoudre le problème. Nous offrons une raison — une vision — : mieux boire, avec la même complexité, voire plus, que celle d'un grand vin.",
-      "s10-cta1": "Demander une dégustation",
-      "s10-cta2": "Poser une question"
+      "s4-eyebrow": "La conséquence",
+      "s4-h2": "La récolte n'a nulle part où aller.",
+      "s4-lead": "Nous aimons le vin. Mais le monde en boit chaque année moins — et de belles grappes, pleines d'histoire et de terroir, sont arrachées, payées pour être détruites, ou laissées pourrir.",
+      "s4-body": "À Bordeaux, en Languedoc, en Rioja et au-delà, les vignobles disparaissent. Près de la moitié de certaines récoltes régionales ne trouve pas preneur. Derrière chaque verre de votre carte se cache un vignoble qui lutte pour rester en vie.",
+      "s5-eyebrow": "Le raccourci de l'industrie",
+      "s5-h2": "La désalcoolisation n'est pas du respect.",
+      "s5-h2-punch": "C'est une trahison.",
+      "s5-sublead": "Ces vins 0,0 % ne sont pas à la hauteur de votre table. Loin de là.",
+      "s5-lead": "La plupart des vins sans alcool sont fabriqués à l'envers. Démontés, puis repeints. Vous enverriez ça en salle ?",
+      "s5-step": "Étape 01",
+      "s5-step1-h": "On part d'un mauvais vin (bon marché)",
+      "s5-step1-p": "Du vin de qualité médiocre est produit en grande quantité — la base est déjà compromise avant même le traitement.",
+      "s5-step2-cap": "Étape 02",
+      "s5-step2-h": "L'alcool et les arômes sont extraits",
+      "s5-step2-p": "La distillation sous vide industrielle ou l'osmose inverse extrait l'alcool — et avec lui tous les esters, flavonoïdes et aromatiques qui faisaient l'intérêt du vin.",
+      "s5-step3-cap": "Étape 03",
+      "s5-step3-h": "Ré-aromatisé",
+      "s5-step3-p": "Le liquide sans saveur est reconstruit avec des arômes artificiels, des additifs et des conservateurs*. L'ombre d'un vin.",
+      "s5-step3-note": "*L'alcool a disparu — mais avec lui son rôle de conservateur. Des additifs chimiques sont alors ajoutés pour compenser.",
+      "s5-verdict": "Le plus grand respect que l'on puisse avoir pour le vin, c'est de ne pas prétendre l'être. La désalcoolisation est l'interprétation la plus irrespectueuse d'une alternative sans alcool — et vos convives le sentent.",
+      "s5-extra": "Quelle histoire un sommelier va-t-il raconter à ses convives à table ? Quand on a maîtrisé l'art du vin et de la viticulture, on ne peut pas déconstruire cette même histoire. Laissons le vin être — et rester — du vin.",
+      "s6-eyebrow": "Notre réponse",
+      "s6-h2": "Nous ne déconstruisons pas. Nous construisons.",
+      "s6-big": "L'ancien rencontre le nouveau. Deux vraies histoires dans une bouteille.",
+      "s6-col1-label": "Culture de la vigne",
+      "s6-col2-label": "Culture des plantes",
+      "s6-col1": "ALTER travaille directement avec les vignerons. Nous leur demandons de vendanger plus tôt — le verjus, le raisin non mûr — un jus qui conserve toute la signature aromatique de son cépage, avec une acidité naturelle et un bel équilibre aigre-doux. L'âme du terroir, intacte.",
+      "s6-col1-list": "Nous sélectionnons et assemblons à la main différents cépages : Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
+      "s6-col2": "Sur cette plateforme viticole, nous construisons un second acte : nos propres distillats de plantes, fleurs et botaniques cultivés en interne. Le nez, le palais et la longueur d'un vigneron — composés avec intention, jamais imités d'une bouteille démontée.",
+      "s6-col2-list": "Nous disposons d'une bibliothèque de plus de 150 distillats naturels : Shiso, Huacatay, Verveine citronnelle, Géranium citronné, Cascara, Combava, Yuzu, Main de Bouddha, Vanille, Magnolia, …",
+      "s7-eyebrow": "La méthode ALTER",
+      "s7-h2": "Du champ à la bouteille, en trois actes.",
+      "s7-step1-h": "Vendange précoce — la plateforme",
+      "s7-step1-p": "Raisins récoltés tôt, cueillis avec nos vignerons avant pleine maturité. Ce jus porte l'équilibre naturel acide, sucré et amer de la cuvée — la fondation de terroir sur laquelle tout repose.",
+      "s7-step2-h": "Culture + distillation botanique — le palais",
+      "s7-step2-p": "Herbes, fleurs et botaniques de notre propre culture, distillées en interne. Ces distillats non alcoolisés définissent la palette aromatique — ajoutant une profondeur adulte à la plateforme de raisin.",
+      "s7-step3-h": "Assemblage — la cuvée",
+      "s7-step3-p": "Nous assemblons les deux actes comme un vigneron assemble ses cépages — en superposant pour que la cuvée s'ouvre en trois phases distinctes : nez, bouche, longueur. La structure qu'un sommelier peut travailler.",
+      "s8-eyebrow": "Le langage du vin",
+      "s8-h2": "Le même rituel.",
+      "s8-h2-punch": "Une autre histoire.",
+      "s8-sublead": "Nous avons construit l'alternative pour vos moments vin — avec le même feuilletage, la même complexité adulte et le même lien avec la table.",
+      "s8-body1": "ALTER ne cherche pas à reproduire le goût du vin — c'est l'erreur de la désalcoolisation. ALTER construit le rituel du vin : l'arc de dégustation en trois actes que tout sommelier reconnaît et que chaque convive lit instinctivement.",
+      "s8-body2": "Verser, faire tourner, sentir, goûter, savourer la longueur. En discuter. Nous parlons le même langage que votre carte des vins — arômes primaires, secondaires et tertiaires, se déployant du nez à la bouche jusqu'à la finale. Nous goûtons simplement différemment. Et c'est exactement l'objectif.",
+      "s8-nose": "Nez / Arômes",
+      "s8-nose1": "Floraux élancés",
+      "s8-nose2": "Zeste d'agrumes",
+      "s8-nose3": "Herbes fraîches",
+      "s8-palate": "Palais / Bouche",
+      "s8-palate1": "Structure",
+      "s8-palate2": "Cœur de fruit",
+      "s8-palate3": "Profondeur botanique",
+      "s8-finish": "Finale / Longueur",
+      "s8-finish1": "Longue persistance",
+      "s8-finish2": "Épices",
+      "s8-finish3": "Minéralité",
+      "s8-finish4": "Maturité",
+      "s9-eyebrow": "Nos cuvées",
+      "s9-h2": "Trois cuvées. Trois moments vin.",
+      "s9-c1-vintage": "Pétillant · 75cl · 0,0% alc.",
+      "s9-c1-desc": "Une cuvée pétillante. Floraux élancés de géranium citronné, une longueur d'apéritif sèche. Conçue pour le premier verre de la soirée.",
+      "s9-pairing": "Accord —",
+      "s9-c1-pairing": "Apéritif · huîtres · entrées légères",
+      "s9-c2-vintage": "Blanc tranquille · 75cl · 0,0% alc.",
+      "s9-c2-desc": "Une explosion d'agrumes frais et de fruits à noyau blancs. Acidité vive, milieu de bouche botanique structuré, finale minérale nette.",
+      "s9-c2-pairing": "Poisson · fruits de mer · volailles · fromages doux",
+      "s9-c3-vintage": "Rouge tranquille · 75cl · 0,0% alc.",
+      "s9-c3-desc": "Profondeur et prise. Fruits noirs, écorce épicée, cèdre et une colonne vertébrale botanique tannique. Pour la table, pour le plat principal.",
+      "s9-c3-pairing": "Viandes rouges · gibier · fromages affinés",
+      "s10-eyebrow": "Déjà reconnu",
+      "s10-h2": "Déjà sur les tables belges\nattentives au sans-alcool.",
+      "s10-lead": "ALTER a été lancé en novembre 2025.",
+      "s10-more": "· et plus encore",
+      "s11-eyebrow": "L'invitation",
+      "s11-h2": "Des cuvées sans alcool avec une (vraie) histoire\nqui commence dans la vigne.",
+      "s11-lead": "Nous venons chez vous. Nous parcourons l'histoire avec votre sommelier et votre équipe. Sans engagement — juste une dégustation qui en vaut la peine.",
+      "s11-vision": "Nous ne nous contentons pas de résoudre le problème. Nous offrons une raison — une vision — : mieux boire, avec la même complexité, voire plus, que celle d'un grand vin.",
+      "s11-cta1": "Demander une dégustation",
+      "s11-cta2": "Poser une question"
     },
 
     nl: {
       "nav-s1": "Cover",
       "nav-s2": "De gast",
       "nav-s3": "De blinde vlek",
-      "nav-s4": "Niet goed genoeg",
-      "nav-s5": "Wij bouwen",
-      "nav-s6": "Drie akten",
-      "nav-s7": "Het ritueel",
-      "nav-s8": "De cuvées",
-      "nav-s9": "Beste tafels",
-      "nav-s10": "De uitnodiging",
+      "nav-s4": "De oogst",
+      "nav-s5": "Niet goed genoeg",
+      "nav-s6": "Wij bouwen",
+      "nav-s7": "Drie akten",
+      "nav-s8": "Het ritueel",
+      "nav-s9": "De cuvées",
+      "nav-s10": "Beste tafels",
+      "nav-s11": "De uitnodiging",
       "drawer-subtitle": "Voor uw tafel · 2026",
       "cover-sub": "Voor uw tafel",
       "cover-tagline": "Een alternatief voor uw wijnmomenten",
@@ -1694,81 +1729,85 @@
       "s3-body2": "Een gastronomische tafel verdient een gastronomisch antwoord. Iets dat dezelfde zorg draagt als uw wijnselectie — iets wat de moeite waard is om over te praten, te combineren, en om voor terug te komen.",
       "s3-stat1": "Gen-Z-volwassenen in Europa die zichzelf\nomschrijven als niet- of weinigdrinkers.",
       "s3-stat2": "Geschatte daling van het wereldwijde wijnverbruik\n2007 → 2024 (OIV / sectordata)",
-      "s4-eyebrow": "De snelkoppeling van de industrie",
-      "s4-h2": "De-alcoholisatie is geen respect.",
-      "s4-h2-punch": "Het is verraad.",
-      "s4-sublead": "Deze 0,0%-wijnen horen niet op uw tafel. Bij lange na niet.",
-      "s4-lead": "De meeste alcoholvrije wijn wordt op de verkeerde manier gemaakt. Ontmanteld, daarna opnieuw geschilderd. Zou u dat uit uw keuken sturen?",
-      "s4-step": "Stap 01",
-      "s4-step1-h": "Men start met slechte (goedkope) wijn",
-      "s4-step1-p": "Wijnen van lage kwaliteit worden op schaal geproduceerd — de basis is al aangetast voor de verwerking begint.",
-      "s4-step2-cap": "Stap 02",
-      "s4-step2-h": "Alcohol + smaak worden weggehaald",
-      "s4-step2-p": "Industriële vacuümdestillatie of omgekeerde osmose verwijdert de alcohol — en daarmee alle esters, flavonoïden en aromaten die de wijn de moeite waard maakten.",
-      "s4-step3-cap": "Stap 03",
-      "s4-step3-h": "Heraromatiseerd",
-      "s4-step3-p": "De smaakloze vloeistof wordt heropgebouwd met kunstmatige smaakstoffen, additieven en conserveermiddelen*. Een schim van wijn.",
-      "s4-step3-note": "*De alcohol is weg — maar ook zijn conserverende werking. Daarom worden er chemische additieven aan toegevoegd om dat te compenseren.",
-      "s4-verdict": "Het grootste respect dat men wijn kan bewijzen, is niet doen alsof je het bent. De-alcoholisatie is de meest respectloze, verraadde interpretatie van een alcoholvrij alternatief — en uw gasten proeven het.",
-      "s4-extra": "Welk verhaal moet een sommelier zijn gasten aan tafel vertellen? Wanneer je de leer van wijn en wijnbouw beheerst, kun je dat verhaal toch niet opnieuw afbreken? Laat wijn wijn zijn — en blijven.",
-      "s5-eyebrow": "Ons antwoord",
-      "s5-h2": "Wij ontmantelen niet. Wij bouwen.",
-      "s5-big": "Oud ontmoet nieuw. Twee echte verhalen in één fles.",
-      "s5-col1-label": "Druiventeelt",
-      "s5-col2-label": "Kruidenteelt",
-      "s5-col1": "ALTER werkt rechtstreeks samen met wijnboeren. We vragen hen vroeger te oogsten — verjus, de onrijpe druif — een sap dat nog de volledige smaaksignatuur van zijn druivenras draagt, met een natuurlijke zuurgraad en een prachtige zoet-zure balans. De ziel van het terroir, intact.",
-      "s5-col1-list": "We selecteren en blenden verschillende cépages met de hand: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
-      "s5-col2": "Op dat viticultureel platform bouwen we een tweede akte: onze eigen distillaten van zelfgekweekte kruiden, bloemen en botanicals. De neus, het verhemelte en de afdronk van een wijnmaker — samengesteld met intentie, niet geïmiteerd van een ontmantelde fles.",
-      "s5-col2-list": "We beschikken over een bibliotheek van 150+ natuurlijke distillaten: Shiso, Huacatay, Citroenverbena, Citroengeranium, Cascara, Kaffir Lime, Yuzu, Buddha's Hand, Vanille, Magnolia, …",
-      "s6-eyebrow": "De ALTER-methode",
-      "s6-h2": "Van veld tot fles, in drie akten.",
-      "s6-step1-h": "Vroege oogst druiven — het platform",
-      "s6-step1-p": "Vroeg geoogste druiven, geplukt met onze wijnboeren voor volledige rijpheid. Dit sap draagt de natuurlijke zure, zoete en bittere balans van de cuvée — de terroir-fundering waarop alles gebouwd wordt.",
-      "s6-step2-h": "Botanische teelt + distillatie — het verhemelte",
-      "s6-step2-p": "Kruiden, bloemen en botanicals van onze eigen teelt, intern gedistilleerd. Deze alcoholvrije distillaten definiëren het smaakpalet — en voegen een volwassen diepte toe aan het druivenplatform.",
-      "s6-step3-h": "Assemblage — de cuvée",
-      "s6-step3-p": "We assembleren de twee akten zoals een wijnmaker zijn cépage samenstelt — in lagen zodat de cuvée in drie duidelijke fasen opent: neus, verhemelte, afdronk. De structuur waarmee een sommelier kan werken.",
-      "s7-eyebrow": "De taal van wijn",
-      "s7-h2": "Hetzelfde ritueel.",
-      "s7-h2-punch": "Een ander verhaal.",
-      "s7-sublead": "We bouwden hét alternatief voor wijnmomenten — met dezelfde gelaagdheid, volwassen complexiteit en verbinding met eten.",
-      "s7-body1": "ALTER jaagt niet op de smaak van wijn — dat is de fout van de-alcoholisatie. ALTER bouwt het ritueel van wijn: de drieaktige proefboog die elke sommelier herkent en elke gast instinctief leest.",
-      "s7-body2": "Inschenken, zwenken, ruiken, proeven, de afdronk voelen. Bespreken. We spreken dezelfde taal als uw wijnkaart — primaire, secundaire en tertiaire aroma's die zich ontvouwen van neus naar verhemelte tot finish. We smaken alleen anders. En dat is precies het punt.",
-      "s7-nose": "Neus / Aroma",
-      "s7-nose1": "Opgelichte floralen",
-      "s7-nose2": "Citroenschil",
-      "s7-nose3": "Verse kruiden",
-      "s7-palate": "Verhemelte / Mond",
-      "s7-palate1": "Structuur",
-      "s7-palate2": "Fruitkern",
-      "s7-palate3": "Botanische diepte",
-      "s7-finish": "Afdronk / Lengte",
-      "s7-finish1": "Lange afdronk",
-      "s7-finish2": "Specerijen",
-      "s7-finish3": "Mineraliteit",
-      "s7-finish4": "Rijpheid",
-      "s8-eyebrow": "Onze cuvées",
-      "s8-h2": "Drie cuvées. Drie wijnmomenten.",
-      "s8-c1-vintage": "Sprankelend · 75cl · 0,0% alc.",
-      "s8-c1-desc": "Een sprankelende cuvée. Opgelichte floralen van citroengeranium, een droge aperitieflengte. Gebouwd voor het eerste glas van de avond.",
-      "s8-pairing": "Combinatie —",
-      "s8-c1-pairing": "Aperitief · oesters · lichte voorgerechten",
-      "s8-c2-vintage": "Stille witte · 75cl · 0,0% alc.",
-      "s8-c2-desc": "Een explosie van frisse citrus en wit steenfruit. Heldere zuurgraad, gelaagd botanisch middenverhemelte, een zuivere minerale afdronk.",
-      "s8-c2-pairing": "Vis · schaaldieren · wit vlees · zachte kazen",
-      "s8-c3-vintage": "Stille rode · 75cl · 0,0% alc.",
-      "s8-c3-desc": "Diepte en grip. Donker fruit, gekruide bast, ceder en een tannisch botanisch ruggengraat. Voor de tafel, voor het hoofdgerecht.",
-      "s8-c3-pairing": "Rood vlees · wild · belegen kazen",
-      "s9-eyebrow": "Al vertrouwd",
-      "s9-h2": "Al op de Belgische tafels\ndie alcoholvrij serieus nemen.",
-      "s9-lead": "ALTER lanceerde in november 2025.",
-      "s9-more": "· en meer",
-      "s10-eyebrow": "De uitnodiging",
-      "s10-h2": "Alcoholvrije cuvées met een (echt) verhaal\ndat in de wijngaard begint.",
-      "s10-lead": "Wij komen naar u toe. We lopen het verhaal door met uw sommelier en uw team. Zonder verplichting — gewoon een proeverij die de moeite waard is.",
-      "s10-vision": "We lossen niet alleen het probleem op. We geven mensen een reden — een visie — om beter te drinken, met dezelfde, en zelfs meer, complexiteit dan in wijn.",
-      "s10-cta1": "Vraag een proeverij aan",
-      "s10-cta2": "Stel ons een vraag"
+      "s4-eyebrow": "Het gevolg",
+      "s4-h2": "De oogst heeft geen plek meer.",
+      "s4-lead": "We houden van wijn. Maar de wereld drinkt elk jaar minder — en prachtige druiven, vol verhaal en terroir, worden uitgerukt, betaald om vernietigd te worden, of gewoon laten rotten.",
+      "s4-body": "In Bordeaux, Languedoc, Rioja en daarbuiten verdwijnen wijngaarden. Bijna de helft van sommige regionale oogsten vindt geen koper. Achter elk glas op uw kaart staat een wijngaard die vecht om te overleven.",
+      "s5-eyebrow": "De snelkoppeling van de industrie",
+      "s5-h2": "De-alcoholisatie is geen respect.",
+      "s5-h2-punch": "Het is verraad.",
+      "s5-sublead": "Deze 0,0%-wijnen horen niet op uw tafel. Bij lange na niet.",
+      "s5-lead": "De meeste alcoholvrije wijn wordt op de verkeerde manier gemaakt. Ontmanteld, daarna opnieuw geschilderd. Zou u dat uit uw keuken sturen?",
+      "s5-step": "Stap 01",
+      "s5-step1-h": "Men start met slechte (goedkope) wijn",
+      "s5-step1-p": "Wijnen van lage kwaliteit worden op schaal geproduceerd — de basis is al aangetast voor de verwerking begint.",
+      "s5-step2-cap": "Stap 02",
+      "s5-step2-h": "Alcohol + smaak worden weggehaald",
+      "s5-step2-p": "Industriële vacuümdestillatie of omgekeerde osmose verwijdert de alcohol — en daarmee alle esters, flavonoïden en aromaten die de wijn de moeite waard maakten.",
+      "s5-step3-cap": "Stap 03",
+      "s5-step3-h": "Heraromatiseerd",
+      "s5-step3-p": "De smaakloze vloeistof wordt heropgebouwd met kunstmatige smaakstoffen, additieven en conserveermiddelen*. Een schim van wijn.",
+      "s5-step3-note": "*De alcohol is weg — maar ook zijn conserverende werking. Daarom worden er chemische additieven aan toegevoegd om dat te compenseren.",
+      "s5-verdict": "Het grootste respect dat men wijn kan bewijzen, is niet doen alsof je het bent. De-alcoholisatie is de meest respectloze, verraadde interpretatie van een alcoholvrij alternatief — en uw gasten proeven het.",
+      "s5-extra": "Welk verhaal moet een sommelier zijn gasten aan tafel vertellen? Wanneer je de leer van wijn en wijnbouw beheerst, kun je dat verhaal toch niet opnieuw afbreken? Laat wijn wijn zijn — en blijven.",
+      "s6-eyebrow": "Ons antwoord",
+      "s6-h2": "Wij ontmantelen niet. Wij bouwen.",
+      "s6-big": "Oud ontmoet nieuw. Twee echte verhalen in één fles.",
+      "s6-col1-label": "Druiventeelt",
+      "s6-col2-label": "Kruidenteelt",
+      "s6-col1": "ALTER werkt rechtstreeks samen met wijnboeren. We vragen hen vroeger te oogsten — verjus, de onrijpe druif — een sap dat nog de volledige smaaksignatuur van zijn druivenras draagt, met een natuurlijke zuurgraad en een prachtige zoet-zure balans. De ziel van het terroir, intact.",
+      "s6-col1-list": "We selecteren en blenden verschillende cépages met de hand: Grüner Veltliner, Zweigelt, Ugni-Blanc, Sorelli, Ravel Blanc, Johanniter, Sauvignac, …",
+      "s6-col2": "Op dat viticultureel platform bouwen we een tweede akte: onze eigen distillaten van zelfgekweekte kruiden, bloemen en botanicals. De neus, het verhemelte en de afdronk van een wijnmaker — samengesteld met intentie, niet geïmiteerd van een ontmantelde fles.",
+      "s6-col2-list": "We beschikken over een bibliotheek van 150+ natuurlijke distillaten: Shiso, Huacatay, Citroenverbena, Citroengeranium, Cascara, Kaffir Lime, Yuzu, Buddha's Hand, Vanille, Magnolia, …",
+      "s7-eyebrow": "De ALTER-methode",
+      "s7-h2": "Van veld tot fles, in drie akten.",
+      "s7-step1-h": "Vroege oogst druiven — het platform",
+      "s7-step1-p": "Vroeg geoogste druiven, geplukt met onze wijnboeren voor volledige rijpheid. Dit sap draagt de natuurlijke zure, zoete en bittere balans van de cuvée — de terroir-fundering waarop alles gebouwd wordt.",
+      "s7-step2-h": "Botanische teelt + distillatie — het verhemelte",
+      "s7-step2-p": "Kruiden, bloemen en botanicals van onze eigen teelt, intern gedistilleerd. Deze alcoholvrije distillaten definiëren het smaakpalet — en voegen een volwassen diepte toe aan het druivenplatform.",
+      "s7-step3-h": "Assemblage — de cuvée",
+      "s7-step3-p": "We assembleren de twee akten zoals een wijnmaker zijn cépage samenstelt — in lagen zodat de cuvée in drie duidelijke fasen opent: neus, verhemelte, afdronk. De structuur waarmee een sommelier kan werken.",
+      "s8-eyebrow": "De taal van wijn",
+      "s8-h2": "Hetzelfde ritueel.",
+      "s8-h2-punch": "Een ander verhaal.",
+      "s8-sublead": "We bouwden hét alternatief voor wijnmomenten — met dezelfde gelaagdheid, volwassen complexiteit en verbinding met eten.",
+      "s8-body1": "ALTER jaagt niet op de smaak van wijn — dat is de fout van de-alcoholisatie. ALTER bouwt het ritueel van wijn: de drieaktige proefboog die elke sommelier herkent en elke gast instinctief leest.",
+      "s8-body2": "Inschenken, zwenken, ruiken, proeven, de afdronk voelen. Bespreken. We spreken dezelfde taal als uw wijnkaart — primaire, secundaire en tertiaire aroma's die zich ontvouwen van neus naar verhemelte tot finish. We smaken alleen anders. En dat is precies het punt.",
+      "s8-nose": "Neus / Aroma",
+      "s8-nose1": "Opgelichte floralen",
+      "s8-nose2": "Citroenschil",
+      "s8-nose3": "Verse kruiden",
+      "s8-palate": "Verhemelte / Mond",
+      "s8-palate1": "Structuur",
+      "s8-palate2": "Fruitkern",
+      "s8-palate3": "Botanische diepte",
+      "s8-finish": "Afdronk / Lengte",
+      "s8-finish1": "Lange afdronk",
+      "s8-finish2": "Specerijen",
+      "s8-finish3": "Mineraliteit",
+      "s8-finish4": "Rijpheid",
+      "s9-eyebrow": "Onze cuvées",
+      "s9-h2": "Drie cuvées. Drie wijnmomenten.",
+      "s9-c1-vintage": "Sprankelend · 75cl · 0,0% alc.",
+      "s9-c1-desc": "Een sprankelende cuvée. Opgelichte floralen van citroengeranium, een droge aperitieflengte. Gebouwd voor het eerste glas van de avond.",
+      "s9-pairing": "Combinatie —",
+      "s9-c1-pairing": "Aperitief · oesters · lichte voorgerechten",
+      "s9-c2-vintage": "Stille witte · 75cl · 0,0% alc.",
+      "s9-c2-desc": "Een explosie van frisse citrus en wit steenfruit. Heldere zuurgraad, gelaagd botanisch middenverhemelte, een zuivere minerale afdronk.",
+      "s9-c2-pairing": "Vis · schaaldieren · wit vlees · zachte kazen",
+      "s9-c3-vintage": "Stille rode · 75cl · 0,0% alc.",
+      "s9-c3-desc": "Diepte en grip. Donker fruit, gekruide bast, ceder en een tannisch botanisch ruggengraat. Voor de tafel, voor het hoofdgerecht.",
+      "s9-c3-pairing": "Rood vlees · wild · belegen kazen",
+      "s10-eyebrow": "Al vertrouwd",
+      "s10-h2": "Al op de Belgische tafels\ndie alcoholvrij serieus nemen.",
+      "s10-lead": "ALTER lanceerde in november 2025.",
+      "s10-more": "· en meer",
+      "s11-eyebrow": "De uitnodiging",
+      "s11-h2": "Alcoholvrije cuvées met een (echt) verhaal\ndat in de wijngaard begint.",
+      "s11-lead": "Wij komen naar u toe. We lopen het verhaal door met uw sommelier en uw team. Zonder verplichting — gewoon een proeverij die de moeite waard is.",
+      "s11-vision": "We lossen niet alleen het probleem op. We geven mensen een reden — een visie — om beter te drinken, met dezelfde, en zelfs meer, complexiteit dan in wijn.",
+      "s11-cta1": "Vraag een proeverij aan",
+      "s11-cta2": "Stel ons een vraag"
     }
   };
 
@@ -1800,7 +1839,7 @@
   });
 
   /* ─── Slide nav & dark-mode detection ─── */
-  var darkSlides = { s2:1, s4:1, s5:1 };
+  var darkSlides = { s2:1, s4:1, s5:1, s6:1 };
   var nav = document.querySelector('.slide-nav');
   var topbar = document.querySelector('.topbar');
   var drawer = document.getElementById('nav-drawer');
@@ -1824,7 +1863,7 @@
 
     if (verdict) {
       if (verdictTimer) { clearTimeout(verdictTimer); verdictTimer = null; }
-      if (id === 's4') {
+      if (id === 's5') {
         verdictTimer = setTimeout(function() { verdict.classList.add('is-revealed'); }, 260);
       } else {
         verdict.classList.remove('is-revealed');
