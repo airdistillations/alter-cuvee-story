@@ -496,6 +496,87 @@
     }
   }
 
+  /* ---------- Slide 03 table infographic (bird's-eye 4 guests) ---------- */
+  .table-graphic{
+    margin-top: clamp(48px, 6vh, 88px);
+    padding-top: clamp(36px, 5vh, 56px);
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 860px){
+    .table-graphic{ grid-template-columns: 1fr; gap: 32px; margin-top: 40px; padding-top: 28px; }
+  }
+  .table-graphic .svg-wrap{
+    display: flex;
+    justify-content: center;
+    color: var(--taupe);
+  }
+  .table-graphic svg{
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    display: block;
+  }
+  .table-graphic .caption-block{ max-width: 460px; }
+  .table-graphic .stat-line{
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .table-graphic .big-stat{
+    font-family: var(--serif);
+    font-size: clamp(56px, 6.4vw, 92px);
+    color: var(--taupe);
+    line-height: 0.9;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+  }
+  .table-graphic .big-stat .frac{
+    color: var(--taupe-soft);
+    margin-left: 2px;
+  }
+  .table-graphic .stat-text{
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.55vw, 22px);
+    color: var(--ink);
+    line-height: 1.3;
+    max-width: 280px;
+    letter-spacing: -0.005em;
+  }
+  .table-graphic .legend{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    margin-top: 24px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    align-items: center;
+  }
+  .table-graphic .legend > span{ display: inline-flex; align-items: center; }
+  .table-graphic .legend .dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .table-graphic .legend .dot.alc{ background: var(--taupe); }
+  .table-graphic .legend .dot.na{ background: transparent; border: 1.4px solid var(--taupe); }
+  .table-graphic .body{
+    margin-top: 22px;
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 460px;
+  }
+
   /* ---------- Two-views split (slides 02 & 03) ---------- */
   .two-views{
     display: grid;
@@ -1086,31 +1167,87 @@
      03 — THE BLIND SPOT IN YOUR MENU
 ══════════════════════════════════════════════ -->
 <section class="slide" id="s3">
-  <div class="wrap two-views">
-    <div class="view view-a">
-      <div class="eyebrow">
-        <span class="num">III</span>
-        <span data-i18n="s3-eyebrow">The gap</span>
+  <div class="wrap">
+    <div class="two-views">
+      <div class="view view-a">
+        <div class="eyebrow">
+          <span class="num">III</span>
+          <span data-i18n="s3-eyebrow">The gap</span>
+        </div>
+        <h2 class="display" data-i18n="s3-h2">Wine lists have blind spots.</h2>
+        <p class="body lg" style="margin-top:22px;" data-i18n="s3-body1">
+          You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (added sugars, a hint of botanicals). The moment breaks.
+        </p>
       </div>
-      <h2 class="display" data-i18n="s3-h2">Wine lists have blind spots.</h2>
-      <p class="body lg" style="margin-top:22px;" data-i18n="s3-body1">
-        You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (added sugars, a hint of botanicals). The moment breaks.
-      </p>
+      <div class="view view-b">
+        <div class="eyebrow">
+          <span class="num">III</span>
+          <span data-i18n="s3b-eyebrow">The shift</span>
+        </div>
+        <h2 class="display" data-i18n="s3b-h2">The world drinks less.</h2>
+        <p class="body lg" style="margin-top:22px;" data-i18n="s3b-body">
+          Wine consumption has been in structural decline for over a decade. Younger generations are turning away from alcohol entirely — not for one night, but for good.
+        </p>
+        <div class="stats-pair">
+          <div class="eye-stat">&minus;34<span style="font-size:0.6em;">%</span></div>
+          <p class="caption" style="margin-top:10px;" data-i18n="s3-stat2">Estimated drop in global wine consumption<br/>2007 → 2024 (OIV / industry data)</p>
+          <div class="eye-stat" style="margin-top:32px;">1 in 3</div>
+          <p class="caption" style="margin-top:10px;" data-i18n="s3-stat1">Gen-Z adults in Europe describe<br/>themselves as non- or low-drinkers.</p>
+        </div>
+      </div>
     </div>
-    <div class="view view-b">
-      <div class="eyebrow">
-        <span class="num">III</span>
-        <span data-i18n="s3b-eyebrow">The shift</span>
+
+    <!-- Bird's-eye-view table infographic -->
+    <div class="table-graphic">
+      <div class="svg-wrap">
+        <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Round table -->
+          <circle cx="300" cy="240" r="110" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="300" cy="240" r="86" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.45"/>
+
+          <!-- TOP guest: flex (one alc → switches to n/a) -->
+          <g transform="translate(300 80)">
+            <circle r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <!-- alcoholic dot -->
+            <circle cx="-11" cy="-46" r="6" fill="currentColor"/>
+            <!-- subtle arrow -->
+            <line x1="-3" y1="-46" x2="3" y2="-46" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+            <!-- non-alcoholic dot (hollow) -->
+            <circle cx="11" cy="-46" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </g>
+
+          <!-- RIGHT guest: alcoholic -->
+          <g transform="translate(510 240)">
+            <circle r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="46" cy="0" r="6" fill="currentColor"/>
+          </g>
+
+          <!-- BOTTOM guest: flex -->
+          <g transform="translate(300 400)">
+            <circle r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="-11" cy="46" r="6" fill="currentColor"/>
+            <line x1="-3" y1="46" x2="3" y2="46" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+            <circle cx="11" cy="46" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </g>
+
+          <!-- LEFT guest: strict non-alcoholic -->
+          <g transform="translate(90 240)">
+            <circle r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="-46" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </g>
+        </svg>
       </div>
-      <h2 class="display" data-i18n="s3b-h2">The world drinks less.</h2>
-      <p class="body lg" style="margin-top:22px;" data-i18n="s3b-body">
-        Wine consumption has been in structural decline for over a decade. Younger generations are turning away from alcohol entirely — not for one night, but for good.
-      </p>
-      <div class="stats-pair">
-        <div class="eye-stat">&minus;34<span style="font-size:0.6em;">%</span></div>
-        <p class="caption" style="margin-top:10px;" data-i18n="s3-stat2">Estimated drop in global wine consumption<br/>2007 → 2024 (OIV / industry data)</p>
-        <div class="eye-stat" style="margin-top:32px;">1 in 3</div>
-        <p class="caption" style="margin-top:10px;" data-i18n="s3-stat1">Gen-Z adults in Europe describe<br/>themselves as non- or low-drinkers.</p>
+
+      <div class="caption-block">
+        <div class="stat-line">
+          <div class="big-stat">3<span class="frac" style="font-size:0.5em; margin-left:4px;">/4</span></div>
+          <div class="stat-text" data-i18n="s3-table-stat">guests will reach for a non-alcoholic option at some point in the evening.</div>
+        </div>
+        <div class="legend">
+          <span><span class="dot alc"></span><span data-i18n="s3-table-legend-alc">Alcoholic</span></span>
+          <span><span class="dot na"></span><span data-i18n="s3-table-legend-na">Non-alcoholic</span></span>
+        </div>
+        <p class="body" data-i18n="s3-table-body">Alcohol drinkers are spoiled for choice — pairings, stories, terroir. ALTER gives the others the same depth, the same ritual. For restaurants, that means an interesting alternative for every guest at the table — and quietly, average spend per guest goes up.</p>
       </div>
     </div>
   </div>
@@ -1595,6 +1732,10 @@
       "s3b-eyebrow": "The shift",
       "s3b-h2": "The world drinks less.",
       "s3b-body": "Wine consumption has been in structural decline for over a decade. Younger generations are turning away from alcohol entirely — not for one night, but for good.",
+      "s3-table-stat": "guests will reach for a non-alcoholic option at some point in the evening.",
+      "s3-table-legend-alc": "Alcoholic",
+      "s3-table-legend-na": "Non-alcoholic",
+      "s3-table-body": "Alcohol drinkers are spoiled for choice — pairings, stories, terroir. ALTER gives the others the same depth, the same ritual. For restaurants, that means an interesting alternative for every guest at the table — and quietly, average spend per guest goes up.",
       "s3-stat1": "Gen-Z adults in Europe describe\nthemselves as non- or low-drinkers.",
       "s3-stat2": "Estimated drop in global wine consumption\n2007 → 2024 (OIV / industry data)",
       "s4-eyebrow": "The consequence",
@@ -1707,6 +1848,10 @@
       "s3b-eyebrow": "Le changement",
       "s3b-h2": "Le monde boit moins.",
       "s3b-body": "La consommation de vin recule structurellement depuis plus d'une décennie. Les jeunes générations s'éloignent de l'alcool — pas pour un soir, mais pour de bon.",
+      "s3-table-stat": "convives chercheront une option sans alcool à un moment de la soirée.",
+      "s3-table-legend-alc": "Alcoolisé",
+      "s3-table-legend-na": "Sans alcool",
+      "s3-table-body": "Les amateurs de vin sont gâtés en choix — accords, histoires, terroirs. ALTER offre aux autres la même profondeur, le même rituel. Pour la restauration, c'est une alternative intéressante pour chaque convive — et discrètement, la dépense moyenne par couvert augmente.",
       "s3-stat1": "Adultes de la génération Z en Europe\nse décrivant comme non- ou petits buveurs.",
       "s3-stat2": "Chute estimée de la consommation mondiale de vin\n2007 → 2024 (OIV / données sectorielles)",
       "s4-eyebrow": "La conséquence",
@@ -1819,6 +1964,10 @@
       "s3b-eyebrow": "De verschuiving",
       "s3b-h2": "De wereld drinkt minder.",
       "s3b-body": "Wijnconsumptie is al meer dan tien jaar structureel aan het dalen. Jongere generaties keren zich af van alcohol — niet voor één avond, maar voor altijd.",
+      "s3-table-stat": "gasten grijpen naar een alcoholvrij alternatief op een moment tijdens de avond.",
+      "s3-table-legend-alc": "Alcoholisch",
+      "s3-table-legend-na": "Alcoholvrij",
+      "s3-table-body": "Wijndrinkers zijn verwend met keuze — pairings, verhalen, terroir. ALTER geeft de anderen dezelfde diepte, hetzelfde ritueel. Voor restaurants betekent dat een boeiend alternatief voor elke gast aan tafel — en stilletjes stijgt de gemiddelde besteding per couvert.",
       "s3-stat1": "Gen-Z-volwassenen in Europa die zichzelf\nomschrijven als niet- of weinigdrinkers.",
       "s3-stat2": "Geschatte daling van het wereldwijde wijnverbruik\n2007 → 2024 (OIV / sectordata)",
       "s4-eyebrow": "Het gevolg",
