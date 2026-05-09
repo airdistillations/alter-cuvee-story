@@ -496,6 +496,73 @@
     }
   }
 
+  /* ---------- Two-views split (slides 02 & 03) ---------- */
+  .two-views{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(36px, 5vw, 72px);
+    align-items: start;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .two-views .view{ position: relative; min-width: 0; }
+  .two-views .view-b{
+    border-left: 1px solid var(--rule);
+    padding-left: clamp(36px, 5vw, 72px);
+  }
+  .hero .two-views .view-b{
+    border-left-color: rgba(229,200,148,0.22);
+  }
+  .two-views h2.display{
+    font-size: clamp(34px, 4vw, 56px) !important;
+    line-height: 1.05;
+    margin: 14px 0 0 !important;
+  }
+  .two-views .lead{
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.42;
+    margin-top: 22px;
+    max-width: none;
+  }
+  .two-views .body{ max-width: none; }
+  .two-views .stats-pair{
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  /* Hero (slide 02) override: anchor content from top, full slide grow */
+  @media (min-width: 901px){
+    #s2{ height: auto; min-height: 100vh; }
+    #s2 .wrap{
+      justify-content: flex-start;
+      padding-top: clamp(120px, 14vh, 180px);
+      padding-bottom: clamp(72px, 10vh, 120px);
+    }
+    #s3{
+      height: auto;
+      min-height: 100vh;
+      justify-content: flex-start;
+      padding-top: clamp(120px, 14vh, 180px);
+      padding-bottom: clamp(72px, 10vh, 120px);
+    }
+  }
+  @media (max-width: 860px){
+    .two-views{
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .two-views .view-b{
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--rule);
+      padding-top: 28px;
+    }
+    .hero .two-views .view-b{
+      border-top-color: rgba(229,200,148,0.22);
+    }
+  }
+
   /* Slides 03/06/07/08: cap h2 size on desktop so the headline stays on one line across EN/FR/NL */
   @media (min-width: 901px){
     #s3 h2.display,
@@ -989,18 +1056,27 @@
 ══════════════════════════════════════════════ -->
 <section class="slide hero" id="s2">
   <div class="media" aria-hidden="true" style="background: #1c1612 url('pitch-assets/vineyard-grapes.jpg') center/cover no-repeat;"></div>
-  <div class="wrap">
-    <div class="eyebrow" style="color:rgba(251,248,242,0.7);">
-      <span class="num" style="color:var(--gold);">II</span>
-      <span data-i18n="s2-eyebrow">The guest at your table</span>
+  <div class="wrap two-views">
+    <div class="view view-a">
+      <div class="eyebrow" style="color:rgba(251,248,242,0.7);">
+        <span class="num" style="color:var(--gold);">II</span>
+        <span data-i18n="s2-eyebrow">At your table</span>
+      </div>
+      <h2 class="display" data-i18n="s2-h2">The guest has changed.</h2>
+      <p class="lead" data-i18n="s2-lead">
+        One in three guests under 40 no longer drinks. They sit at your table, open your wine list, and close it again. Not because they don't want a moment — because nothing on your list speaks to them.
+      </p>
     </div>
-    <h2 class="display" style="margin-top:16px;" data-i18n="s2-h2">The guest has changed.</h2>
-    <p class="lead" style="margin-top:24px;" data-i18n="s2-lead">
-      One in three guests under 40 no longer drinks. They sit at your table, open your wine list, and close it again. Not because they don't want a moment. Because nothing on your list speaks to them.
-    </p>
-    <p class="body" style="margin-top:28px; color:rgba(251,248,242,0.75);" data-i18n="s2-body">
-      This isn't a trend. It's a generational shift already sitting across from you every service. The question isn't whether to respond — it's how.
-    </p>
+    <div class="view view-b">
+      <div class="eyebrow" style="color:rgba(251,248,242,0.7);">
+        <span class="num" style="color:var(--gold);">II</span>
+        <span data-i18n="s2b-eyebrow">In the vineyard</span>
+      </div>
+      <h2 class="display" data-i18n="s2b-h2">We love wine.</h2>
+      <p class="lead" data-i18n="s2b-lead">
+        Centuries of terroir, varietals, harvests and savoir-faire. A living culture of winegrowers who read the soil like a language. We have no intention of replacing it.
+      </p>
+    </div>
   </div>
   <div class="folio" style="color:rgba(251,248,242,0.6);">02</div>
 </section>
@@ -1010,27 +1086,31 @@
      03 — THE BLIND SPOT IN YOUR MENU
 ══════════════════════════════════════════════ -->
 <section class="slide" id="s3">
-  <div class="wrap">
-    <div class="eyebrow">
-      <span class="num">III</span>
-      <span data-i18n="s3-eyebrow">The gap</span>
-    </div>
-    <h2 class="display" style="margin-top:18px;" data-i18n="s3-h2">Wine lists have blind spots.</h2>
-    <hr class="rule short" />
-    <div class="cols" style="margin-top:24px;">
-      <div>
-        <p class="body lg" data-i18n="s3-body1">
-          You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (created with a bunch of added sugars and little botanicals). The moment breaks.
-        </p>
-        <p class="body" style="margin-top:20px;" data-i18n="s3-body2">
-          A gastronomic table deserves a gastronomic response. One that carries the same care as your wine selection — something worth discussing, worth pairing, worth coming back for.
-        </p>
+  <div class="wrap two-views">
+    <div class="view view-a">
+      <div class="eyebrow">
+        <span class="num">III</span>
+        <span data-i18n="s3-eyebrow">The gap</span>
       </div>
-      <div>
-        <div class="eye-stat">1 in 3</div>
-        <p class="caption" style="margin-top:12px;" data-i18n="s3-stat1">Gen-Z adults in Europe describe<br/>themselves as non- or low-drinkers.</p>
-        <div class="eye-stat" style="margin-top:48px;">&minus;34<span style="font-size:0.6em;">%</span></div>
-        <p class="caption" style="margin-top:12px;" data-i18n="s3-stat2">Estimated drop in global wine consumption<br/>2007 → 2024 (OIV / industry data)</p>
+      <h2 class="display" data-i18n="s3-h2">Wine lists have blind spots.</h2>
+      <p class="body lg" style="margin-top:22px;" data-i18n="s3-body1">
+        You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (added sugars, a hint of botanicals). The moment breaks.
+      </p>
+    </div>
+    <div class="view view-b">
+      <div class="eyebrow">
+        <span class="num">III</span>
+        <span data-i18n="s3b-eyebrow">The shift</span>
+      </div>
+      <h2 class="display" data-i18n="s3b-h2">The world drinks less.</h2>
+      <p class="body lg" style="margin-top:22px;" data-i18n="s3b-body">
+        Wine consumption has been in structural decline for over a decade. Younger generations are turning away from alcohol entirely — not for one night, but for good.
+      </p>
+      <div class="stats-pair">
+        <div class="eye-stat">&minus;34<span style="font-size:0.6em;">%</span></div>
+        <p class="caption" style="margin-top:10px;" data-i18n="s3-stat2">Estimated drop in global wine consumption<br/>2007 → 2024 (OIV / industry data)</p>
+        <div class="eye-stat" style="margin-top:32px;">1 in 3</div>
+        <p class="caption" style="margin-top:10px;" data-i18n="s3-stat1">Gen-Z adults in Europe describe<br/>themselves as non- or low-drinkers.</p>
       </div>
     </div>
   </div>
@@ -1503,14 +1583,18 @@
       "cover-tagline": "An alternative for your wine moments",
       "cover-byline-l": "Built, not torn down.",
       "cover-byline-r": "An alternative, not an imitation.",
-      "s2-eyebrow": "The guest at your table",
+      "s2-eyebrow": "At your table",
       "s2-h2": "The guest has changed.",
-      "s2-lead": "One in three guests under 40 no longer drinks. They sit at your table, open your wine list, and close it again. Not because they don't want a moment. Because nothing on your list speaks to them.",
-      "s2-body": "This isn't a trend. It's a generational shift already sitting across from you every service. The question isn't whether to respond — it's how.",
+      "s2-lead": "One in three guests under 40 no longer drinks. They sit at your table, open your wine list, and close it again. Not because they don't want a moment — because nothing on your list speaks to them.",
+      "s2b-eyebrow": "In the vineyard",
+      "s2b-h2": "We love wine.",
+      "s2b-lead": "Centuries of terroir, varietals, harvests and savoir-faire. A living culture of winegrowers who read the soil like a language. We have no intention of replacing it.",
       "s3-eyebrow": "The gap",
       "s3-h2": "Wine lists have blind spots.",
-      "s3-body1": "You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (created with a bunch of added sugars and little botanicals). The moment breaks.",
-      "s3-body2": "A gastronomic table deserves a gastronomic response. One that carries the same care as your wine selection — something worth discussing, worth pairing, worth coming back for.",
+      "s3-body1": "You've built a wine list that tells a story. Every glass has a terroir, a grower, a reason. You chose each bottle with intention. And then — for one in three guests — nothing. Sparkling water. A soft drink, acetic acid-driven fermentations (added sugars, a hint of botanicals). The moment breaks.",
+      "s3b-eyebrow": "The shift",
+      "s3b-h2": "The world drinks less.",
+      "s3b-body": "Wine consumption has been in structural decline for over a decade. Younger generations are turning away from alcohol entirely — not for one night, but for good.",
       "s3-stat1": "Gen-Z adults in Europe describe\nthemselves as non- or low-drinkers.",
       "s3-stat2": "Estimated drop in global wine consumption\n2007 → 2024 (OIV / industry data)",
       "s4-eyebrow": "The consequence",
@@ -1611,14 +1695,18 @@
       "cover-tagline": "Une alternative pour vos moments vin",
       "cover-byline-l": "Construit, pas déconstruit.",
       "cover-byline-r": "Une alternative, pas une imitation.",
-      "s2-eyebrow": "Le client à votre table",
+      "s2-eyebrow": "À votre table",
       "s2-h2": "Le client a changé.",
       "s2-lead": "Un convive sur trois de moins de 40 ans ne boit plus d'alcool. Il s'assoit à votre table, ouvre votre carte des vins, et la referme. Non par manque d'envie — mais parce que rien ne lui est destiné.",
-      "s2-body": "Ce n'est pas une tendance. C'est un changement générationnel déjà assis en face de vous à chaque service. La question n'est pas de savoir si vous devez répondre — mais comment.",
+      "s2b-eyebrow": "Dans la vigne",
+      "s2b-h2": "Nous aimons le vin.",
+      "s2b-lead": "Des siècles de terroir, de cépages, de vendanges et de savoir-faire. Une culture vivante de vignerons qui lisent la terre comme une langue. Nous n'avons aucune intention de la remplacer.",
       "s3-eyebrow": "L'angle mort",
       "s3-h2": "Les cartes des vins ont des angles morts.",
-      "s3-body1": "Vous avez construit une carte qui raconte une histoire. Chaque verre a un terroir, un vigneron, une raison d'être. Vous avez choisi chaque bouteille avec intention. Et puis — pour un tiers de vos convives — rien. De l'eau pétillante. Un soda, des fermentations à l'acide acétique (à coups de sucres ajoutés et d'un soupçon de plantes). Le moment se brise.",
-      "s3-body2": "Une table gastronomique mérite une réponse gastronomique. Une réponse qui porte le même soin que votre sélection de vins — quelque chose qui vaut la peine d'être discuté, accordé, et qui donne envie de revenir.",
+      "s3-body1": "Vous avez construit une carte qui raconte une histoire. Chaque verre a un terroir, un vigneron, une raison d'être. Vous avez choisi chaque bouteille avec intention. Et puis — pour un tiers de vos convives — rien. De l'eau pétillante. Un soda, des fermentations à l'acide acétique (sucres ajoutés, un soupçon de plantes). Le moment se brise.",
+      "s3b-eyebrow": "Le changement",
+      "s3b-h2": "Le monde boit moins.",
+      "s3b-body": "La consommation de vin recule structurellement depuis plus d'une décennie. Les jeunes générations s'éloignent de l'alcool — pas pour un soir, mais pour de bon.",
       "s3-stat1": "Adultes de la génération Z en Europe\nse décrivant comme non- ou petits buveurs.",
       "s3-stat2": "Chute estimée de la consommation mondiale de vin\n2007 → 2024 (OIV / données sectorielles)",
       "s4-eyebrow": "La conséquence",
@@ -1719,14 +1807,18 @@
       "cover-tagline": "Een alternatief voor uw wijnmomenten",
       "cover-byline-l": "Gebouwd, niet ontmanteld.",
       "cover-byline-r": "Een alternatief, geen imitatie.",
-      "s2-eyebrow": "De gast aan uw tafel",
+      "s2-eyebrow": "Aan uw tafel",
       "s2-h2": "De gast is veranderd.",
       "s2-lead": "Een op drie gasten onder de 40 drinkt geen alcohol meer. Ze zitten aan uw tafel, openen uw wijnkaart en sluiten hem weer. Niet omdat ze geen moment willen — maar omdat er niets voor hen op staat.",
-      "s2-body": "Dit is geen trend. Het is een generationele verschuiving die bij elk service al tegenover u zit. De vraag is niet óf u moet reageren — maar hoe.",
+      "s2b-eyebrow": "In de wijngaard",
+      "s2b-h2": "We houden van wijn.",
+      "s2b-lead": "Eeuwen van terroir, druivenrassen, oogsten en savoir-faire. Een levende cultuur van wijnboeren die de bodem lezen als een taal. We hebben geen enkele intentie om die te vervangen.",
       "s3-eyebrow": "De blinde vlek",
       "s3-h2": "Wijnkaarten hebben blinde vlekken.",
-      "s3-body1": "U hebt een wijnkaart gebouwd die een verhaal vertelt. Elk glas heeft een terroir, een wijnboer, een reden. U koos elke fles met intentie. En dan — voor één op drie gasten — niets. Bruiswater. Een frisdrank, azijnzure fermentaties (gemaakt met flink wat toegevoegde suiker en een paar botanicals). Het moment breekt.",
-      "s3-body2": "Een gastronomische tafel verdient een gastronomisch antwoord. Iets dat dezelfde zorg draagt als uw wijnselectie — iets wat de moeite waard is om over te praten, te combineren, en om voor terug te komen.",
+      "s3-body1": "U hebt een wijnkaart gebouwd die een verhaal vertelt. Elk glas heeft een terroir, een wijnboer, een reden. U koos elke fles met intentie. En dan — voor één op drie gasten — niets. Bruiswater. Een frisdrank, azijnzure fermentaties (toegevoegde suiker, een vleugje botanicals). Het moment breekt.",
+      "s3b-eyebrow": "De verschuiving",
+      "s3b-h2": "De wereld drinkt minder.",
+      "s3b-body": "Wijnconsumptie is al meer dan tien jaar structureel aan het dalen. Jongere generaties keren zich af van alcohol — niet voor één avond, maar voor altijd.",
       "s3-stat1": "Gen-Z-volwassenen in Europa die zichzelf\nomschrijven als niet- of weinigdrinkers.",
       "s3-stat2": "Geschatte daling van het wereldwijde wijnverbruik\n2007 → 2024 (OIV / sectordata)",
       "s4-eyebrow": "Het gevolg",
